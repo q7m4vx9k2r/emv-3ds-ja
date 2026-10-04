@@ -1,0 +1,3842 @@
+[
+  [
+    1,
+    "Legal Notice",
+    2
+  ],
+  [
+    1,
+    "Revision Log",
+    3
+  ],
+  [
+    1,
+    "Contents",
+    4
+  ],
+  [
+    1,
+    "Figures",
+    13
+  ],
+  [
+    1,
+    "Tables",
+    15
+  ],
+  [
+    1,
+    "1 Introduction",
+    17
+  ],
+  [
+    2,
+    "1.1 Purpose",
+    17
+  ],
+  [
+    2,
+    "1.2 Audience",
+    17
+  ],
+  [
+    2,
+    "1.3 Normative References",
+    18
+  ],
+  [
+    2,
+    "1.4 Acknowledgements",
+    20
+  ],
+  [
+    2,
+    "1.5 Definitions",
+    21
+  ],
+  [
+    2,
+    "1.6 Abbreviations",
+    31
+  ],
+  [
+    2,
+    "1.7 3-D Secure Protocol Version Number",
+    32
+  ],
+  [
+    2,
+    "1.8 Supporting Documentation",
+    32
+  ],
+  [
+    2,
+    "1.9 Terminology and Conventions",
+    33
+  ],
+  [
+    2,
+    "1.10 Constraints",
+    34
+  ],
+  [
+    1,
+    "2 EMV 3-D Secure Overview",
+    35
+  ],
+  [
+    2,
+    "2.1 Acquirer Domain",
+    36
+  ],
+  [
+    3,
+    "2.1.1 3DS Requestor Environment",
+    36
+  ],
+  [
+    4,
+    "2.1.1.1 3DS Requestor",
+    36
+  ],
+  [
+    4,
+    "2.1.1.2 3DS Client",
+    36
+  ],
+  [
+    4,
+    "2.1.1.3 3DS Server",
+    37
+  ],
+  [
+    3,
+    "2.1.2 3DS Integrator (3DS Server and 3DS Client)",
+    37
+  ],
+  [
+    3,
+    "2.1.3 Acquirer (Payment Authorisation)",
+    37
+  ],
+  [
+    2,
+    "2.2 Interoperability Domain",
+    38
+  ],
+  [
+    3,
+    "2.2.1 Directory Server",
+    38
+  ],
+  [
+    3,
+    "2.2.2 Directory Server Certificate Authority",
+    38
+  ],
+  [
+    3,
+    "2.2.3 Authorisation System (Payment Authentication)",
+    39
+  ],
+  [
+    2,
+    "2.3 Issuer Domain",
+    39
+  ],
+  [
+    3,
+    "2.3.1 Cardholder",
+    39
+  ],
+  [
+    3,
+    "2.3.2 Consumer Device",
+    39
+  ],
+  [
+    3,
+    "2.3.3 Issuer",
+    39
+  ],
+  [
+    3,
+    "2.3.4 Access Control Server",
+    40
+  ],
+  [
+    2,
+    "2.4 3-D Secure Messages",
+    40
+  ],
+  [
+    3,
+    "2.4.1 Authentication Request Message (AReq)",
+    40
+  ],
+  [
+    3,
+    "2.4.2 Authentication Response Message (ARes)",
+    40
+  ],
+  [
+    3,
+    "2.4.3 Challenge Request Message (CReq)",
+    40
+  ],
+  [
+    3,
+    "2.4.4 Challenge Response Message (CRes)",
+    40
+  ],
+  [
+    3,
+    "2.4.5 Results Request Message (RReq)",
+    41
+  ],
+  [
+    3,
+    "2.4.6 Results Response Message (RRes)",
+    41
+  ],
+  [
+    3,
+    "2.4.7 Preparation Request Message (PReq)",
+    41
+  ],
+  [
+    3,
+    "2.4.8 Preparation Response Message (PRes)",
+    41
+  ],
+  [
+    3,
+    "2.4.9 Operation Request Message (OReq)",
+    41
+  ],
+  [
+    3,
+    "2.4.10 Operation Response Message (ORes)",
+    41
+  ],
+  [
+    3,
+    "2.4.11 Error Message",
+    41
+  ],
+  [
+    2,
+    "2.5 Authentication Flows",
+    42
+  ],
+  [
+    3,
+    "2.5.1 Frictionless Flow",
+    42
+  ],
+  [
+    3,
+    "2.5.2 Challenge Flow",
+    42
+  ],
+  [
+    3,
+    "2.5.3 Processing EMV Payment Tokens",
+    42
+  ],
+  [
+    2,
+    "2.6 Frictionless Flow Outline",
+    43
+  ],
+  [
+    3,
+    "2.6.1 3DS Requestor Environment—App-based",
+    44
+  ],
+  [
+    3,
+    "2.6.2 3DS Requestor Environment—Browser-based",
+    45
+  ],
+  [
+    3,
+    "2.6.3 3DS Requestor Environment—3RI",
+    45
+  ],
+  [
+    2,
+    "2.7 Challenge Flow Outline",
+    47
+  ],
+  [
+    1,
+    "3 EMV 3-D Secure Authentication Flow Requirements",
+    49
+  ],
+  [
+    2,
+    "3.1 App-based Requirements",
+    50
+  ],
+  [
+    3,
+    "Step 1: The Cardholder",
+    51
+  ],
+  [
+    3,
+    "Step 2: The 3DS Requestor App",
+    51
+  ],
+  [
+    4,
+    "Seq 3.1 [Req 11] Determine which DS the authentication transaction needs to be sent based on the BIN (as defined in ISO 7812) and optionally other Cardholder Account Information.",
+    51
+  ],
+  [
+    4,
+    "Seq 3.2 [Req 419] Use the Protocol Version lists from the ACS Protocol Versions and the DS Protocol Versions obtained from the PRes message and the Protocol Version supported by the 3DS SDK to set the highest common Message Version Number.",
+    51
+  ],
+  [
+    3,
+    "Step 3: The 3DS SDK",
+    51
+  ],
+  [
+    3,
+    "Step 4: The 3DS Requestor Environment",
+    51
+  ],
+  [
+    4,
+    "Seq 3.3 [Req 1] The communication between the 3DS Requestor App and Server (3DS Requestor or 3DS Server) shall be established using a server authenticated TLS session as defined in Section 6.1.1.",
+    52
+  ],
+  [
+    4,
+    "Seq 3.4 [Req 2] Obtain the Device Information, SDK Reference Number, and SDK App ID. Refer to the applicable 3DS SDK specification and Annex A of this specification for additional detail.",
+    52
+  ],
+  [
+    4,
+    "Seq 3.5 [Req 3] Generate the SDK Transaction ID for the 3-D Secure authentication.",
+    52
+  ],
+  [
+    4,
+    "Seq 3.6 [Req 4] Set the Device Rendering Options Supported data element as defined in Table A.1.",
+    52
+  ],
+  [
+    4,
+    "Seq 3.7 [Req 5] Encrypt the Device Information (using the public key of the DS) as defined in Section 6.2.2.1.",
+    52
+  ],
+  [
+    4,
+    "Seq 3.8 [Req 6] Prepare the 3DS SDK to ACS secure channel as defined in Section 6.2.3.1.",
+    52
+  ],
+  [
+    3,
+    "Step 5: The 3DS Server",
+    52
+  ],
+  [
+    4,
+    "Seq 3.9 [Req 7] Verify the authenticity of the 3DS SDK as defined in Section 6.2.1.",
+    52
+  ],
+  [
+    4,
+    "Seq 3.10 [Req 300] If the 3DS Requestor and 3DS Server are separate components, ensure that data transferred between the components is protected at a level that satisfies Payment System security requirements with mutual authentication of both servers.",
+    53
+  ],
+  [
+    4,
+    "Seq 3.11 [Req 8] Generate the 3DS Server Transaction ID.",
+    53
+  ],
+  [
+    4,
+    "Seq 3.12 [Req 9] Obtain the 3DS Requestor ID, the 3DS Server Reference Number and conditionally, the Acquirer BIN.",
+    53
+  ],
+  [
+    4,
+    "Seq 3.13 [Req 10] Ensure availability of the necessary information for the AReq message (as defined in Table B.1) gathered by components within the 3DS Requestor Environment.",
+    53
+  ],
+  [
+    4,
+    "Seq 3.14 [Req 12] Establish a secure link with the DS as defined in Section 6.1.2.1.",
+    53
+  ],
+  [
+    4,
+    "Seq 3.15 [Req 13] Format the AReq message as defined in Table B.1.",
+    53
+  ],
+  [
+    4,
+    "Seq 3.16 [Req 14] Send the AReq message to the DS using the secure link established in [Req 12].",
+    53
+  ],
+  [
+    3,
+    "Step 6: The DS",
+    53
+  ],
+  [
+    4,
+    "Seq 3.17 [Req 15] Receive the AReq message from the 3DS Server and Validate as defined in Section 5.9.1.",
+    53
+  ],
+  [
+    4,
+    "Seq 3.18 [Req 390] If SDK Type = 02, verify the signature in the SDK Server Signed Content, as defined in Section 6.2.2.4.",
+    53
+  ],
+  [
+    4,
+    "Seq 3.19 [Req 394] Determine if the SDK Type and the SDK Reference Number are valid for the transaction according to DS rules.",
+    53
+  ],
+  [
+    4,
+    "Seq 3.20 [Req 16] Generate the DS Transaction ID.",
+    53
+  ],
+  [
+    4,
+    "Seq 3.21 [Req 420] Identify the DS public key used by the 3DS SDK to encrypt Device Information from the key identifier (kid) in the SDK Encrypted Data.",
+    53
+  ],
+  [
+    4,
+    "Seq 3.22 [Req 17] Decrypt the SDK Encrypted Data data element of the AReq message as defined in Section 6.2.2.2 and Base64url-encode resulting content and move the encoded content to the Device Information data element of the AReq message for the ACS.",
+    54
+  ],
+  [
+    4,
+    "Seq 3.23 [Req 18] Check that the Message Version Number is supported by the DS and the ACS.",
+    54
+  ],
+  [
+    4,
+    "Seq 3.24 [Req 19] Check the data elements in the AReq message as follows.",
+    54
+  ],
+  [
+    4,
+    "Seq 3.25 [Req 20] Determine if the Cardholder Account Number received in the AReq message is in a participating account range.",
+    54
+  ],
+  [
+    4,
+    "Seq 3.26 [Req 21] Determine if the Cardholder Account Number is in an account range that has an ACS capable of processing 3-D Secure messages.",
+    54
+  ],
+  [
+    4,
+    "Seq 3.27 [Req 22] Store the 3DS Server URL with the DS Transaction ID (for possible RReq message processing).",
+    54
+  ],
+  [
+    4,
+    "Seq 3.28 [Req 23] Establish a secure link with the ACS as defined in Section 6.1.3.1.",
+    54
+  ],
+  [
+    4,
+    "Seq 3.29 [Req 24] Send the AReq message to the ACS using the secure link established in [Req 23].",
+    55
+  ],
+  [
+    3,
+    "Step 7: The ACS",
+    55
+  ],
+  [
+    4,
+    "Seq 3.30 [Req 25] Receive the AReq message from the DS and Validate as defined in Section 5.9.2.",
+    55
+  ],
+  [
+    4,
+    "Seq 3.31 [Req 26] Check whether the Consumer Device is supported unless transaction will be processed as a Decoupled Authentication.",
+    55
+  ],
+  [
+    4,
+    "Seq 3.32 [Req 386] Check whether the Device Information data elements correspond to the Data Version Number.",
+    55
+  ],
+  [
+    4,
+    "Seq 3.33 [Req 318] The ACS shall not initiate an interaction with the Cardholder as part of a Frictionless transaction. Cardholder interaction shall be done as part of a Challenge Flow.",
+    55
+  ],
+  [
+    4,
+    "Seq 3.34 [Req 27] Generate the ACS Transaction ID.",
+    55
+  ],
+  [
+    4,
+    "Seq 3.35 [Req 28] Use the Cardholder Account Number from the AReq message to determine whether authentication is available or can be completed for the Cardholder.",
+    55
+  ],
+  [
+    4,
+    "Seq 3.36 [Req 29] Use the values of the 3DS Requestor Challenge Indicator, the 3DS Requestor Authentication Indicator and the 3DS Requestor Decoupled Request Indicator received in the AReq message when evaluating the transaction disposition as defined...",
+    55
+  ],
+  [
+    4,
+    "Seq 3.37 [Req 30] Evaluate the values received in the AReq message and determine whether the transaction0F0F  is:",
+    56
+  ],
+  [
+    4,
+    "Seq 3.38 [Req 31] If a transaction is deemed authenticated (Transaction Status = Y or A) the ACS performs the following:",
+    56
+  ],
+  [
+    4,
+    "Seq 3.39 [Req 32] If a challenge is deemed necessary (Transaction Status = C), the ACS determines whether an acceptable challenge method is supported by the 3DS SDK based in part on the following data elements received in the AReq message: Device Chan...",
+    56
+  ],
+  [
+    4,
+    "Seq 3.40 [Req 321] If a Decoupled Authentication challenge is deemed necessary (Transaction Status = D) and 3DS Requestor Decoupled Request Indicator = Y or B, the ACS determines whether an acceptable challenge method is supported by the ACS based in ...",
+    57
+  ],
+  [
+    4,
+    "Seq 3.41 [Req 33] Complete formatting of the ARes message as defined in Table B.2.",
+    57
+  ],
+  [
+    4,
+    "Seq 3.42 [Req 34] Send the ARes message to the DS using the secure link established in [Req 23].",
+    57
+  ],
+  [
+    4,
+    "Seq 3.43 [Req 322] For a Decoupled Authentication transaction (Transaction Status = D), do the following asynchronous process:",
+    57
+  ],
+  [
+    3,
+    "Step 8: The DS",
+    57
+  ],
+  [
+    4,
+    "Seq 3.44 [Req 305] Check the data elements in the ARes message as follows:",
+    57
+  ],
+  [
+    4,
+    "Seq 3.45 [Req 35] Receive the ARes message or Error Message from the ACS and Validate as defined in Section 5.9.3.",
+    57
+  ],
+  [
+    4,
+    "Seq 3.46 [Req 36] Log transaction information as required by the DS rules.",
+    57
+  ],
+  [
+    4,
+    "Seq 3.47 [Req 421] If the DS creates the ARes message on the ACS’s behalf (for example, the DS returns a Transaction Status = A), then the DS sets the ACS Reference Number equal to the DS Reference Number and the ACS Transaction ID equal to the DS Tra...",
+    58
+  ],
+  [
+    4,
+    "Seq 3.48 [Req 37] Send the ARes message to the 3DS Server received from the ACS using the secure link established in [Req 12].",
+    58
+  ],
+  [
+    3,
+    "Step 9: The 3DS Server",
+    58
+  ],
+  [
+    4,
+    "Seq 3.49 [Req 38] Receive the ARes message or Error Message from the DS and Validate as defined in Section 5.9.4.",
+    58
+  ],
+  [
+    4,
+    "Seq 3.50 [Req 39] For an authenticated transaction (Transaction Status = Y or A):",
+    58
+  ],
+  [
+    4,
+    "Seq 3.51 [Req 40] For a transaction with a challenge (Transaction Status = C):",
+    58
+  ],
+  [
+    4,
+    "Seq 3.52 [Req 41] For a transaction not authenticated (Transaction Status = N, U, or R):",
+    58
+  ],
+  [
+    4,
+    "Seq 3.53 [Req 323] For a Decoupled Authentication transaction (Transaction Status = D), send necessary information (as defined in Table B.2) from the ARes message to the 3DS Requestor Environment.",
+    58
+  ],
+  [
+    4,
+    "Seq 3.54 [Req 355] Convey the Cardholder Information Text to the 3DS Requestor Environment. The 3DS Requestor displays the Cardholder Information Text received to the Cardholder as depicted in Section A.20.",
+    58
+  ],
+  [
+    3,
+    "Step 10: The 3DS Requestor App",
+    59
+  ],
+  [
+    3,
+    "Step 11: The 3DS Requestor Environment",
+    59
+  ],
+  [
+    4,
+    "Seq 3.55 [Req 42] Check the received 3-D Secure data elements as defined in Table A.1.",
+    59
+  ],
+  [
+    4,
+    "Seq 3.56 [Req 43] Complete the ACS to 3DS SDK secure channel as defined in Section 6.2.3.3.",
+    59
+  ],
+  [
+    4,
+    "Seq 3.57 [Req 44] Establish a secure link to the ACS as defined in Section 6.1.4.1.",
+    59
+  ],
+  [
+    4,
+    "Seq 3.58 [Req 45] Format the CReq message as defined in Table B.3 and protect the content as defined in Section 6.2.4.1.",
+    59
+  ],
+  [
+    4,
+    "Seq 3.59 [Req 46] Send the CReq message to the ACS using the secure link established in [Req 44].",
+    59
+  ],
+  [
+    3,
+    "Step 12: The ACS",
+    59
+  ],
+  [
+    4,
+    "Seq 3.60 [Req 47] Receive the CReq message or Error Message from the 3DS SDK and Validate as defined in Section 5.9.5.",
+    59
+  ],
+  [
+    4,
+    "Seq 3.61 [Req 48] Set the Interaction Counter to zero.",
+    59
+  ],
+  [
+    4,
+    "Seq 3.62 [Req 49] Set Challenge Completion Indicator = N.",
+    59
+  ],
+  [
+    4,
+    "Seq 3.63 [Req 50] Obtain the information needed to display a Challenge on the Consumer Device per the selected challenge method and ACS UI Type. Refer to Section 4.2 for information about UI data elements.",
+    59
+  ],
+  [
+    3,
+    "Step 13: The ACS",
+    60
+  ],
+  [
+    4,
+    "Seq 3.64 [Req 51] Format the CRes message as defined in Table B.4.",
+    60
+  ],
+  [
+    4,
+    "Seq 3.65 [Req 52] Protect the content in the CRes message as defined in Section 6.2.4.4.",
+    60
+  ],
+  [
+    4,
+    "Seq 3.66 [Req 53] Send the CRes message to the 3DS SDK through the secure link established in [Req 44] for an initial interaction with the 3DS SDK, or [Req 56] for a continued interaction with the 3DS SDK.",
+    60
+  ],
+  [
+    3,
+    "Step 14: The 3DS SDK",
+    60
+  ],
+  [
+    4,
+    "Seq 3.67 [Req 54] Receive the CRes message or Error Message from the ACS and Validate as defined in Section 5.9.7.",
+    60
+  ],
+  [
+    4,
+    "Seq 3.68 [Req 55] Display the UI based upon the ACS UI Type selected and the data elements populated. Refer to Section 4.2 of the applicable 3DS SDK specification or for an OOB authentication (ACS UI Type = 04 or 06), refer to Section 3.2 for UI detai...",
+    60
+  ],
+  [
+    3,
+    "Step 15: The Cardholder Interaction with the 3DS SDK",
+    60
+  ],
+  [
+    4,
+    "Seq 3.69 [Req 59] If the Cardholder abandons the challenge during the processing of Step 12 through Step 15, the 3DS SDK sets the Challenge Cancelation Indicator to the appropriate value in the CReq message.",
+    60
+  ],
+  [
+    3,
+    "Step 16: The 3DS SDK",
+    60
+  ],
+  [
+    4,
+    "Seq 3.70 [Req 56] Establish a secure link to the ACS as defined in Section 6.1.4.1.",
+    60
+  ],
+  [
+    4,
+    "Seq 3.71 [Req 57] Format the CReq message as defined in Table B.3 and protect the contents as defined in Section 6.2.4.1.",
+    60
+  ],
+  [
+    4,
+    "Seq 3.72 [Req 58] Send one CReq message to the ACS using the secure link established in [Req 56] and wait for the ACS CRes message response before sending another CReq message.",
+    60
+  ],
+  [
+    3,
+    "Step 17: The ACS",
+    61
+  ],
+  [
+    4,
+    "Seq 3.73 [Req 60] Receive the CReq message or Error Message from the 3DS SDK and Validate as defined in Section 5.9.5.",
+    61
+  ],
+  [
+    4,
+    "Seq 3.74 [Req 310] If Challenge Cancelation Indicator has a value, then continue with Step 18.",
+    61
+  ],
+  [
+    4,
+    "Seq 3.75 [Req 461] If the ACS determines that Decoupled Authentication Fallback is necessary and 3DS Requestor Decoupled Request Indicator = F or B, inform the Cardholder of Decoupled Authentication using the Information UI template as defined in Chap...",
+    61
+  ],
+  [
+    4,
+    "Seq 3.76 [Req 61] Check the data received in the CReq message and assess the status of the authentication.",
+    61
+  ],
+  [
+    3,
+    "Step 18: The ACS",
+    62
+  ],
+  [
+    4,
+    "Seq 3.77 [Req 462] For a Challenge Flow (ARes Transaction Status = C), if 3DS Requestor Decoupled Request Indicator = F or B, and if the ACS has determined that Decoupled Authentication Fallback is necessary,",
+    62
+  ],
+  [
+    4,
+    "Seq 3.78 [Req 62] Format the RReq message as defined in Table B.8.",
+    62
+  ],
+  [
+    4,
+    "Seq 3.79 [Req 63] Establish a secure link with the DS as defined in Section 6.1.3.2.",
+    62
+  ],
+  [
+    4,
+    "Seq 3.80 [Req 64] If the Cardholder abandons the challenge during the processing of Step 16 and Step 17, or if the ACS receives an abandonment CReq message from the 3DS SDK (as defined in [Req 60]), then the ACS sets the Challenge Completion Indicator...",
+    62
+  ],
+  [
+    4,
+    "Seq 3.81 [Req 65] Send the RReq message to the DS using the secure link established in [Req 63].",
+    62
+  ],
+  [
+    4,
+    "Seq 3.82 [Req 66] Ensure that one RReq message is sent to the DS for each ARes message with a Transaction Status = C or D.",
+    62
+  ],
+  [
+    4,
+    "Seq 3.83 [Req 345] Ensure for a Decoupled Authentication transaction that:",
+    62
+  ],
+  [
+    3,
+    "Step 19: The DS",
+    62
+  ],
+  [
+    4,
+    "Seq 3.84 [Req 67] Receive the RReq message from the ACS and Validate as defined in Section 5.9.8.",
+    62
+  ],
+  [
+    4,
+    "Seq 3.85 [Req 68] Establish a secure link with the 3DS Server as defined in Section 6.1.2.2 using the 3DS Server URL extracted from the AReq message and stored in [Req 22].",
+    62
+  ],
+  [
+    4,
+    "Seq 3.86 [Req 69] Send the RReq message to the 3DS Server using the secure link established in [Req 68].",
+    62
+  ],
+  [
+    3,
+    "Step 20: The 3DS Server",
+    63
+  ],
+  [
+    4,
+    "Seq 3.87 [Req 70] Receive the RReq message or Error Message from the DS and Validate as defined in Section 5.9.9.",
+    63
+  ],
+  [
+    4,
+    "Seq 3.88 [Req 463] If Transaction Status = D and if 3DS Requestor Decoupled Request Indicator = F or B, set Results Message Status to 04.",
+    63
+  ],
+  [
+    4,
+    "Seq 3.89 [Req 71] Format the RRes message as defined in Table B.9 and send to the DS using the secure link established in [Req 68].",
+    63
+  ],
+  [
+    4,
+    "Seq 3.90 [Req 346] For a Decoupled Authentication transaction, at a minimum wait the specified 3DS Requestor Decoupled Max Time plus 1 hour, 30 seconds for the RReq message. If an RReq message is never received, further processing is outside the scope...",
+    63
+  ],
+  [
+    3,
+    "Step 21: The DS",
+    63
+  ],
+  [
+    4,
+    "Seq 3.91 [Req 72] Receive the RRes message or Error Message from the 3DS Server and Validate as defined in Section 5.9.10.",
+    63
+  ],
+  [
+    4,
+    "Seq 3.92 [Req 73] Log transaction information as required by the DS.",
+    63
+  ],
+  [
+    4,
+    "Seq 3.93 [Req 74] Send the RRes message to the ACS as received from the 3DS Server using the secure link established in [Req 63].",
+    63
+  ],
+  [
+    3,
+    "Step 22: The ACS",
+    63
+  ],
+  [
+    4,
+    "Seq 3.94 [Req 75] Receive the RRes message or Error Message from the DS and Validate as defined in Section 5.9.11.",
+    63
+  ],
+  [
+    3,
+    "Step 23: The ACS",
+    63
+  ],
+  [
+    4,
+    "Seq 3.95 [Req 470] If 3DS Requestor Decoupled Request Indicator = F or B and if Transaction Status = D in the RReq message, set Transaction Status to D in the Final CRes message.",
+    63
+  ],
+  [
+    4,
+    "Seq 3.96 [Req 76] Format the Final CRes message (as defined in Table B.5) and protect the contents as defined in Section 6.2.4.4.",
+    63
+  ],
+  [
+    4,
+    "Seq 3.97 [Req 77] Send the Final CRes message to the 3DS SDK using the secure link established in [Req 56].",
+    64
+  ],
+  [
+    3,
+    "Step 24: The 3DS Requestor Environment",
+    64
+  ],
+  [
+    4,
+    "Seq 3.98 [Req 78] Receive the Final CRes message or Error Message from the ACS and Validate as defined in Section 5.9.7.",
+    64
+  ],
+  [
+    4,
+    "Seq 3.99 [Req 79] Convey the appropriate response to the 3DS Requestor App.",
+    64
+  ],
+  [
+    3,
+    "Step 25: The 3DS Requestor App",
+    64
+  ],
+  [
+    2,
+    "3.2 Challenge Flow with OOB Authentication Requirements",
+    65
+  ],
+  [
+    3,
+    "3.2.1 OOB Requirements",
+    66
+  ],
+  [
+    4,
+    "Step 15: The Cardholder Interaction with the 3DS SDK",
+    66
+  ],
+  [
+    5,
+    "Seq 3.100 [Req 399] For ACS UI Type = 04, set the OOB Continuation Indicator = 01 when the Cardholder selects the button with the OOB Continuation Label.",
+    66
+  ],
+  [
+    5,
+    "Seq 3.101 [Req 400] For ACS UI Type = 04 or 06, if the 3DS Requestor App comes to the foreground (for example, the Cardholder returns to the 3DS Requestor App that comes to the foreground), set the value of the OOB Continuation Indicator = 02, and con...",
+    66
+  ],
+  [
+    3,
+    "3.2.2 OOB Automatic Switching Features",
+    66
+  ],
+  [
+    4,
+    "Step 13: The ACS",
+    66
+  ],
+  [
+    5,
+    "Seq 3.102 [Req 401] For ACS UI Type = 04 or 06, set the OOB App URL to the URL value used during installation of the OOB Authentication App.",
+    66
+  ],
+  [
+    5,
+    "Seq 3.103 [Req 402] For ACS UI Type = 06, include in the OOB challenge HTML code an action that triggers a location change to the HTTPS://EMV3DS/openoobApp URL when the Cardholder selects the OOB App URL button.",
+    67
+  ],
+  [
+    4,
+    "Step 14: The 3DS SDK",
+    67
+  ],
+  [
+    5,
+    "Seq 3.104 [Req 403] For ACS UI Type = 04, display a button with the OOB App Label used for the switch to the OOB Authentication App.",
+    67
+  ],
+  [
+    4,
+    "Step 15: The Cardholder Interaction with the 3DS SDK",
+    67
+  ],
+  [
+    4,
+    "3.2.2.1 OOB App URL Requirements",
+    67
+  ],
+  [
+    5,
+    "Seq 3.105 [Req 472] Check that the OOB App URL uses the HTTPS scheme.",
+    67
+  ],
+  [
+    5,
+    "Seq 3.106 [Req 404] For ACS UI Type = 04, attempt to open the OOB Authentication App by using the OOB App URL when the Cardholder selects the button with the OOB App Label.",
+    67
+  ],
+  [
+    5,
+    "Seq 3.107 [Req 405] For ACS UI Type = 06:",
+    67
+  ],
+  [
+    5,
+    "Seq 3.108 [Req 406] If the attempt to open the OOB Authentication App is successful, then continue with Section 3.2.2.2.",
+    67
+  ],
+  [
+    5,
+    "Seq 3.109 [Req 407] If the attempt to open the OOB Authentication App fails (for example, the platform method to open the OOB App URL returns an error), then:",
+    67
+  ],
+  [
+    4,
+    "3.2.2.2 3DS Requestor App URL",
+    67
+  ],
+  [
+    5,
+    "Seq 3.110 [Req 475] When receiving the CReq message, the ACS shall check that the 3DS Requestor App URL uses the HTTPS scheme.",
+    68
+  ],
+  [
+    5,
+    "Seq 3.111 [Req 408] Display the UI template and data elements received in the last CRes message.",
+    68
+  ],
+  [
+    5,
+    "Seq 3.112 [Req 409] For ACS UI Type = 04 or 06, set the OOB Continuation Indicator = 02 and continue with Step 16 in the App-based flow.",
+    68
+  ],
+  [
+    2,
+    "3.3 Browser-based Requirements",
+    69
+  ],
+  [
+    3,
+    "Step 1: The Cardholder",
+    69
+  ],
+  [
+    3,
+    "Step 2: The 3DS Server/3DS Requestor",
+    69
+  ],
+  [
+    4,
+    "Seq 3.113 [Req 80] Retrieve the ACS Protocol Version and DS Protocol Version lists and if present, the 3DS Method URL (stored from a previously received PRes message) for the card range.",
+    70
+  ],
+  [
+    4,
+    "Seq 3.114 [Req 81] Generate the 3DS Server Transaction ID.",
+    70
+  ],
+  [
+    4,
+    "Seq 3.115 [Req 82] Pass the 3DS Server Transaction ID, ACS Protocol Versions, DS Protocol Versions and if present, the 3DS Method URL back through the 3DS Requestor Environment to the 3DS Requestor.",
+    70
+  ],
+  [
+    3,
+    "Step 3: The 3DS Requestor Environment",
+    70
+  ],
+  [
+    4,
+    "Seq 3.116 [Req 83] For each transaction ensure that the 3DS Server Transaction ID used in the 3DS Method on the 3DS Requestor Website is the same 3DS Server Transaction ID used in the AReq message.",
+    70
+  ],
+  [
+    4,
+    "Seq 3.117 [Req 84] Ensure that the 3DS Method is executed on the 3DS Requestor Website if a 3DS Method URL exists as defined in Section 5.8.1.",
+    70
+  ],
+  [
+    3,
+    "Step 4: Browser and the ACS",
+    70
+  ],
+  [
+    4,
+    "Seq 3.118 [Req 85] Ensure that the communication between the Browser and the ACS is established using a server authenticated TLS session (as defined in Section 6.1.8).",
+    70
+  ],
+  [
+    3,
+    "Step 5: The 3DS Requestor Environment",
+    70
+  ],
+  [
+    4,
+    "Seq 3.119 [Req 86] Ensure that the communication between client (Browser) and server (3DS Requestor) has been established using a server authenticated TLS session as defined in Section 6.1.1.",
+    71
+  ],
+  [
+    4,
+    "Seq 3.120 [Req 301] Ensure, if the 3DS Requestor and 3DS Server are separate components, that data transferred between the components is protected at a level that satisfies Payment System security requirements with mutual authentication of both servers.",
+    71
+  ],
+  [
+    3,
+    "Step 6: The 3DS Server",
+    71
+  ],
+  [
+    4,
+    "Seq 3.121 [Req 87] Obtain the 3DS Requestor ID, the 3DS Server Reference Number, and conditionally the Acquirer BIN.",
+    71
+  ],
+  [
+    4,
+    "Seq 3.122 [Req 88] Ensure availability of the necessary information for the AReq message (as defined in Table B.1) gathered by components within the 3DS Requestor Environment.",
+    71
+  ],
+  [
+    4,
+    "Seq 3.123 [Req 441] Ensure that the 3DS Requestor executed the 3DS Method within the previous 10 minutes. Otherwise, the 3DS Requestor re-executes the 3DS Method as defined in Section 5.8.1.",
+    71
+  ],
+  [
+    4,
+    "Seq 3.124 [Req 89] Determine which DS the authentication transaction needs to be sent based on the BIN (as defined in ISO 7812) and optionally other Cardholder Account Information.",
+    71
+  ],
+  [
+    4,
+    "Seq 3.125 [Req 90] Establish a secure link with the DS as defined in Section 6.1.2.1.",
+    71
+  ],
+  [
+    4,
+    "Seq 3.126 [Req 422] Use the Protocol Version lists from the ACS Protocol Versions and DS Protocol Versions obtained from the PRes message to set the highest common Message Version Number.",
+    72
+  ],
+  [
+    4,
+    "Seq 3.127 [Req 91] Format the AReq message as defined in Table B.1.",
+    72
+  ],
+  [
+    4,
+    "Seq 3.128 [Req 92] Send the AReq message to the DS using the secure link established in [Req 90].",
+    72
+  ],
+  [
+    3,
+    "Step 7: The DS",
+    72
+  ],
+  [
+    4,
+    "Seq 3.129 [Req 93] Receive the AReq message from the 3DS Server and Validate as defined in Section 5.9.1.",
+    72
+  ],
+  [
+    4,
+    "Seq 3.130 [Req 94] Generate the DS Transaction ID.",
+    72
+  ],
+  [
+    4,
+    "Seq 3.131 [Req 95] Check that the Message Version Number is supported by the DS and the ACS.",
+    72
+  ],
+  [
+    4,
+    "Seq 3.132 [Req 96] Further check the data elements in the AReq message as follows:",
+    72
+  ],
+  [
+    4,
+    "Seq 3.133 [Req 97] Determine if the Cardholder Account Number received in the AReq message is in a participating account range.",
+    72
+  ],
+  [
+    4,
+    "Seq 3.134 [Req 98] Determine if the Cardholder Account Number is in an account range that has an ACS capable of processing 3-D Secure messages.",
+    73
+  ],
+  [
+    4,
+    "Seq 3.135 [Req 99] Store the 3DS Server URL with the DS Transaction ID (for possible RReq processing).",
+    73
+  ],
+  [
+    4,
+    "Seq 3.136 [Req 100] Establish a secure link with the ACS as defined in Section 6.1.3.1.",
+    73
+  ],
+  [
+    4,
+    "Seq 3.137 [Req 101] Send the AReq to the ACS using the secure link established in [Req 100].",
+    73
+  ],
+  [
+    3,
+    "Step 8: The ACS",
+    73
+  ],
+  [
+    4,
+    "Seq 3.138 [Req 102] Receive the AReq message from the DS and Validate as defined in Section 5.9.2.",
+    73
+  ],
+  [
+    4,
+    "Seq 3.139 [Req 103] Check whether the Consumer Device on which the authentication is being requested is supported.",
+    73
+  ],
+  [
+    4,
+    "Seq 3.140 [Req 410] Retrieve the data from a previous 3DS Method execution if the 3DS Method ID is present.",
+    73
+  ],
+  [
+    4,
+    "Seq 3.141 [Req 319] The ACS shall not initiate an interaction with the Cardholder as part of a Frictionless transaction. Cardholder interaction shall be done as part of a Challenge Flow.",
+    73
+  ],
+  [
+    4,
+    "Seq 3.142 [Req 104] Generate the ACS Transaction ID.",
+    73
+  ],
+  [
+    4,
+    "Seq 3.143 [Req 105] Use the Cardholder Account Number from the AReq message to determine whether authentication is available or can be completed for the Cardholder.",
+    74
+  ],
+  [
+    4,
+    "Seq 3.144 [Req 106] Use the values of the 3DS Requestor Challenge Indicator, the 3DS Requestor Authentication Indicator and the 3DS Requestor Decoupled Request Indicator received in the AReq message when evaluating the transaction disposition as defin...",
+    74
+  ],
+  [
+    4,
+    "Seq 3.145 [Req 107] Evaluate the values received in the AReq message and determine whether the transaction2F2F  is:",
+    74
+  ],
+  [
+    4,
+    "Seq 3.146 [Req 108] If a transaction is deemed authenticated (Transaction Status is = Y or A), the ACS performs the following:",
+    74
+  ],
+  [
+    4,
+    "Seq 3.147 [Req 109] If a challenge is deemed necessary (Transaction Status = C), the ACS determines whether an acceptable challenge method is supported by the 3DS Server considering the 3DS Requestor Challenge Indicator data element received in the AR...",
+    75
+  ],
+  [
+    4,
+    "Seq 3.148 [Req 325] If a Decoupled Authentication challenge is deemed necessary (Transaction Status = D) and 3DS Requestor Decoupled Request Indicator = Y or B, the ACS determines whether an acceptable challenge method is supported by the ACS based in...",
+    75
+  ],
+  [
+    4,
+    "Seq 3.149 [Req 110] Complete formatting of the ARes message as defined in Table B.2.",
+    75
+  ],
+  [
+    4,
+    "Seq 3.150 [Req 111] Send the ARes message to the DS using the secure link established in [Req 100].",
+    75
+  ],
+  [
+    4,
+    "Seq 3.151 [Req 326] For a Decoupled Authentication transaction, (Transaction Status = D), do the following asynchronous process:",
+    75
+  ],
+  [
+    3,
+    "Step 9: The DS",
+    75
+  ],
+  [
+    4,
+    "Seq 3.152 [Req 306] Check the data elements in the ARes message as follows.",
+    75
+  ],
+  [
+    4,
+    "Seq 3.153 [Req 112] Receive the ARes message or Error Message from the ACS and Validate as defined in Section 5.9.3.",
+    76
+  ],
+  [
+    4,
+    "Seq 3.154 [Req 113] Log transaction information as required by the DS rules.",
+    76
+  ],
+  [
+    4,
+    "Seq 3.155 [Req 411] If the DS creates the ARes message on the ACS’s behalf (for example, the DS returns a Transaction Status = A), then set the ACS Reference Number equal to the DS Reference Number and the ACS Transaction ID equal to the DS Transactio...",
+    76
+  ],
+  [
+    4,
+    "Seq 3.156 [Req 114] Send the ARes message to the 3DS Server received from the ACS using the secure link established in [Req 100].",
+    76
+  ],
+  [
+    3,
+    "Step 10: The 3DS Server",
+    76
+  ],
+  [
+    4,
+    "Seq 3.157 [Req 115] Receive the ARes message or Error Message from the DS and Validate as defined in Section 5.9.4.",
+    76
+  ],
+  [
+    4,
+    "Seq 3.158 [Req 116] For an authenticated transaction (Transaction Status = Y or A):",
+    76
+  ],
+  [
+    4,
+    "Seq 3.159 [Req 117] For a transaction with a challenge (Transaction Status = C):",
+    76
+  ],
+  [
+    4,
+    "Seq 3.160 [Req 118] For a transaction not authenticated (Transaction Status = N, U, or R):",
+    77
+  ],
+  [
+    4,
+    "Seq 3.161 [Req 327] For a Decoupled Authentication transaction (Transaction Status = D), send necessary information (as defined in Table B.2) from the ARes message to the 3DS Requestor Environment.",
+    77
+  ],
+  [
+    4,
+    "Seq 3.162 [Req 356] Convey the Cardholder Information Text to the 3DS Requestor Environment. The 3DS Requestor displays the Cardholder Information Text received to the Cardholder as depicted in Section A.20.",
+    77
+  ],
+  [
+    3,
+    "Step 11: The ACS",
+    77
+  ],
+  [
+    4,
+    "Seq 3.163 [Req 119] Receive the CReq message from the Browser:",
+    77
+  ],
+  [
+    4,
+    "Seq 3.164 [Req 120] Prepare the authentication User Interface (ACS UI) to the Cardholder Browser.",
+    77
+  ],
+  [
+    4,
+    "Seq 3.165 [Req 121] Set the Interaction Counter to zero.",
+    77
+  ],
+  [
+    4,
+    "Seq 3.166 [Req 442] If the ACS receives more than one CReq message, the ACS either:",
+    77
+  ],
+  [
+    3,
+    "Step 12: The ACS and Browser",
+    78
+  ],
+  [
+    4,
+    "Seq 3.167 [Req 307] The ACS shall not lead the Cardholder outside of the authentication flow by redirecting to any registration or marketing pages. Any redirection shall be used for authentication purposes only and within the iframe. The ACS shall onl...",
+    78
+  ],
+  [
+    4,
+    "Seq 3.168 [Req 122] Send the ACS UI to the Cardholder over the channel established by the HTTP POST in Step 10. The ACS shall allow the content of the UI to be framed. The Browser displays the ACS UI to the Cardholder.",
+    78
+  ],
+  [
+    3,
+    "Step 13: The Cardholder",
+    78
+  ],
+  [
+    3,
+    "Step 14: The Browser",
+    78
+  ],
+  [
+    3,
+    "Step 15: The ACS",
+    78
+  ],
+  [
+    4,
+    "Seq 3.169 [Req 464] If the ACS determines that Decoupled Authentication Fallback is necessary and 3DS Requestor Decoupled Request Indicator = F or B, inform the Cardholder of Decoupled Authentication before the Final CRes message using the Information...",
+    78
+  ],
+  [
+    4,
+    "Seq 3.170 [Req 123] Check the authentication data received and assess the status of the authentication:",
+    78
+  ],
+  [
+    3,
+    "Step 16: The ACS",
+    79
+  ],
+  [
+    4,
+    "Seq 3.171 [Req 465] For a Challenge Flow (ARes Transaction Status = C), if 3DS Requestor Decoupled Request Indicator = F or B, and if the ACS has determined that Decoupled Authentication Fallback is necessary,",
+    79
+  ],
+  [
+    4,
+    "Seq 3.172 [Req 124] Format the RReq message as defined in Table B.8.",
+    79
+  ],
+  [
+    4,
+    "Seq 3.173 [Req 125] Establish a secure link with the DS as defined in Section 6.1.3.2.",
+    79
+  ],
+  [
+    4,
+    "Seq 3.174 [Req 126] If the Cardholder abandons the challenge during the processing of Step 12 through Step 14, then the ACS sets the Challenge Cancelation Indicator to the appropriate value in the RReq message. Refer to Annex A for specific values.",
+    79
+  ],
+  [
+    4,
+    "Seq 3.175 [Req 127] Send the RReq message to the DS.",
+    79
+  ],
+  [
+    4,
+    "Seq 3.176 [Req 128] Ensure that one RReq message is sent to the DS for each ARes message with a Transaction Status = C or D.",
+    80
+  ],
+  [
+    4,
+    "Seq 3.177 [Req 347] Ensure for a Decoupled Authentication transaction that:",
+    80
+  ],
+  [
+    3,
+    "Step 17: The DS",
+    80
+  ],
+  [
+    4,
+    "Seq 3.178 [Req 129] Receive the RReq message from the ACS and Validate as defined in Section 5.9.8.",
+    80
+  ],
+  [
+    4,
+    "Seq 3.179 [Req 130] Establish a secure link with the 3DS Server as defined in Section 6.1.2.2 using the 3DS Server URL data element extracted from the AReq message and stored in [Req 99].",
+    80
+  ],
+  [
+    4,
+    "Seq 3.180 [Req 131] Send the RReq message to the 3DS Server using the secure link established in [Req 130].",
+    80
+  ],
+  [
+    3,
+    "Step 18: The 3DS Server",
+    80
+  ],
+  [
+    4,
+    "Seq 3.181 [Req 132] Receive the RReq message or Error Message from the DS and Validate as defined in Section 5.9.9.",
+    80
+  ],
+  [
+    4,
+    "Seq 3.182 [Req 466] If Transaction Status = D and if 3DS Requestor Decoupled Request Indicator = F or B, set Results Message Status to 04.",
+    80
+  ],
+  [
+    4,
+    "Seq 3.183 [Req 133] Format the RRes message as defined in Table B.9 and send it to the DS using the secure link established in [Req 130].",
+    80
+  ],
+  [
+    4,
+    "Seq 3.184 [Req 348] For a Decoupled Authentication transaction, at a minimum wait the specified 3DS Requestor Decoupled Max Time plus 1 hour, 30 seconds for the RReq, If an RReq message is never received, further processing is outside the scope of 3-D...",
+    80
+  ],
+  [
+    3,
+    "Step 19: The DS",
+    80
+  ],
+  [
+    4,
+    "Seq 3.185 [Req 134] Receive the RRes message or Error Message from the 3DS Server and Validate as defined in Section 5.9.10.",
+    81
+  ],
+  [
+    4,
+    "Seq 3.186 [Req 135] Log transaction information as required by the DS rules.",
+    81
+  ],
+  [
+    4,
+    "Seq 3.187 [Req 136] Send the RRes message to the ACS through the secure link established in [Req 125].",
+    81
+  ],
+  [
+    3,
+    "Step 20: The ACS",
+    81
+  ],
+  [
+    4,
+    "Seq 3.188 [Req 137] Receive the RRes message or Error Message from the DS and Validate as defined in Section 5.9.12.",
+    81
+  ],
+  [
+    3,
+    "Step 21: The ACS",
+    81
+  ],
+  [
+    4,
+    "Seq 3.189 [Req 471] If 3DS Requestor Decoupled Request Indicator = F or B and if Transaction Status = D in the RReq message, set Transaction Status to D in the Final CRes message.",
+    81
+  ],
+  [
+    4,
+    "Seq 3.190 [Req 138] Format the Final CRes message as defined in Table B.5.",
+    81
+  ],
+  [
+    4,
+    "Seq 3.191 [Req 139] Base64url-encode the Final CRes message and include, if present in the CReq message, the 3DS Requestor Session Data in HTML form (as defined in Table A.3).",
+    81
+  ],
+  [
+    4,
+    "Seq 3.192 [Req 140] Send the Final CRes message via an HTTP POST (for example, using JavaScript) through the Browser to the Notification URL that was sent in the initial AReq message using the secure link established in Step 10.",
+    81
+  ],
+  [
+    3,
+    "Step 22: The 3DS Requestor Environment",
+    81
+  ],
+  [
+    2,
+    "3.4 3RI-based Requirements",
+    82
+  ],
+  [
+    3,
+    "Step 1: The 3DS Requestor",
+    83
+  ],
+  [
+    4,
+    "Seq 3.193 [Req 271] Ensure, if the 3DS Requestor and 3DS Server are separate components, that data transferred between the components is protected at a level that satisfies Payment System security requirements with mutual authentication of both servers.",
+    83
+  ],
+  [
+    3,
+    "Step 2: The 3DS Server",
+    83
+  ],
+  [
+    4,
+    "Seq 3.194 [Req 272] Obtain the 3DS Requestor ID, the 3DS Server Reference Number, and conditionally the Acquirer BIN.",
+    83
+  ],
+  [
+    4,
+    "Seq 3.195 [Req 302] Generate the 3DS Server Transaction ID.",
+    83
+  ],
+  [
+    4,
+    "Seq 3.196 [Req 273] Ensure availability of the necessary information for the AReq message (as defined in Table B.1) gathered by components within the 3DS Requestor Environment.",
+    83
+  ],
+  [
+    4,
+    "Seq 3.197 [Req 274] Determine which DS the authentication transaction needs to be sent based on the BIN (as defined in ISO 7812) and optionally other Cardholder Account Information.",
+    83
+  ],
+  [
+    4,
+    "Seq 3.198 [Req 275] Establish a secure link with the DS as defined in Section 6.1.2.1.",
+    83
+  ],
+  [
+    4,
+    "Seq 3.199 [Req 423] Use the Protocol Version lists from the ACS Protocol Versions and DS Protocol Versions obtained from the PRes message to set the highest common Message Version Number.",
+    83
+  ],
+  [
+    4,
+    "Seq 3.200 [Req 467] In the case of Decoupled Authentication Fallback, the 3DS Server initiates a 3RI authentication within 60 seconds of receiving the RReq message from the previous transaction, containing:",
+    84
+  ],
+  [
+    4,
+    "Seq 3.201 [Req 276] Format the AReq message as defined in Table B.1.",
+    84
+  ],
+  [
+    4,
+    "Seq 3.202 [Req 277] Send the AReq message to the DS using the secure link established in [Req 275].",
+    84
+  ],
+  [
+    3,
+    "Step 3: The DS",
+    84
+  ],
+  [
+    4,
+    "Seq 3.203 [Req 278] Receive the AReq message from the 3DS Server and Validate as defined in Section 5.9.1.",
+    84
+  ],
+  [
+    4,
+    "Seq 3.204 [Req 279] Generate the DS Transaction ID.",
+    84
+  ],
+  [
+    4,
+    "Seq 3.205 [Req 280] Check that the Message Version Number is supported by the DS and the ACS.",
+    84
+  ],
+  [
+    4,
+    "Seq 3.206 [Req 281] Further Check the data elements in the AReq message as follows:",
+    84
+  ],
+  [
+    4,
+    "Seq 3.207 [Req 282] Determine if the Cardholder Account Number received in the AReq message is in a participating account range.",
+    84
+  ],
+  [
+    4,
+    "Seq 3.208 [Req 283] Determine if the Cardholder Account Number is in an account range that has an ACS capable of processing 3-D Secure messages.",
+    85
+  ],
+  [
+    4,
+    "Seq 3.209 [Req 427] Store the 3DS Server URL with the DS Transaction ID (for possible RReq message processing).",
+    85
+  ],
+  [
+    4,
+    "Seq 3.210 [Req 285] Establish a secure link with the ACS as defined in Section 6.1.3.1.",
+    85
+  ],
+  [
+    4,
+    "Seq 3.211 [Req 286] Send the AReq to the ACS using the secure link established in [Req 285].",
+    85
+  ],
+  [
+    3,
+    "Step 4: The ACS",
+    85
+  ],
+  [
+    4,
+    "Seq 3.212 [Req 287] Receive the AReq message from the DS and Validate as defined in Section 5.9.2.",
+    85
+  ],
+  [
+    4,
+    "Seq 3.213 [Req 288] Generate the ACS Transaction ID.",
+    85
+  ],
+  [
+    4,
+    "Seq 3.214 [Req 289] Use the Cardholder Account Number from the AReq message to determine whether authentication is available for the Cardholder.",
+    85
+  ],
+  [
+    4,
+    "Seq 3.215 [Req 290] Use the values of the 3RI Indicator, the 3DS Requestor Decoupled Request Indicator and the 3DS Requestor Prior Transaction Authentication Information received in the AReq message when evaluating the transaction disposition as defin...",
+    85
+  ],
+  [
+    4,
+    "Seq 3.216 [Req 291] Evaluate the values received in the AReq message and determine whether the 3RI transaction4F4F  is:",
+    85
+  ],
+  [
+    4,
+    "Seq 3.217 [Req 292] If a transaction is deemed authenticated (Transaction Status is = Y or A) then the ACS performs the following:",
+    86
+  ],
+  [
+    4,
+    "Seq 3.218 [Req 328] If a Decoupled Authentication challenge is deemed necessary (Transaction Status = D), the ACS determines whether an acceptable challenge method is supported by the ACS based in part on the following data element received in the ARe...",
+    86
+  ],
+  [
+    4,
+    "Seq 3.219 [Req 293] Complete formatting of the ARes message as defined in Table B.2.",
+    86
+  ],
+  [
+    4,
+    "Seq 3.220 [Req 294] Send the ARes message to the DS using the secure link established in [Req 285].",
+    86
+  ],
+  [
+    3,
+    "Step 5: The DS",
+    86
+  ],
+  [
+    4,
+    "Seq 3.221 [Req 308] Check the data elements in the ARes message as follows.",
+    86
+  ],
+  [
+    4,
+    "Seq 3.222 [Req 295] Receive the ARes message or Error Message from the ACS and Validate as defined in Section 5.9.3.",
+    87
+  ],
+  [
+    4,
+    "Seq 3.223 [Req 296] Log the transaction information as required by the DS rules.",
+    87
+  ],
+  [
+    4,
+    "Seq 3.224 [Req 297] Send the ARes message to the 3DS Server received from the ACS using the secure link established in [Req 275].",
+    87
+  ],
+  [
+    4,
+    "Seq 3.225 [Req 412] If the DS creates the ARes message on the ACS’s behalf (for example, the DS returns a Transaction Status = A), then the DS sets the ACS Reference Number equal to the DS Reference Number and the ACS Transaction ID equal to the DS Tr...",
+    87
+  ],
+  [
+    3,
+    "Step 6: The 3DS Server",
+    87
+  ],
+  [
+    4,
+    "Seq 3.226 [Req 298] Receive the ARes message or Error Message from the DS and Validate as defined in Section 5.9.4.",
+    87
+  ],
+  [
+    4,
+    "Seq 3.227 [Req 299] Send necessary information (as defined in Table B.2) from the ARes message to the 3DS Requestor Environment.",
+    87
+  ],
+  [
+    4,
+    "Seq 3.228 [Req 357] If the Cardholder Information Text has been provided by the ACS for this transaction the 3DS Server shall ensure the Cardholder Information Text is conveyed on the 3DS Requestor Website.",
+    87
+  ],
+  [
+    3,
+    "Step 7: The ACS",
+    87
+  ],
+  [
+    4,
+    "Seq 3.229 [Req 330] For a Decoupled Authentication transaction (Transaction Status = D), do the following:",
+    87
+  ],
+  [
+    3,
+    "Step 8: The ACS",
+    88
+  ],
+  [
+    4,
+    "Seq 3.230 [Req 349] Format the RReq message as defined in Table B.8.",
+    88
+  ],
+  [
+    4,
+    "Seq 3.231 [Req 350] Establish a secure link with the DS as defined in Section 6.1.3.2.",
+    88
+  ],
+  [
+    4,
+    "Seq 3.232 [Req 351] Send the RReq message to the DS.",
+    88
+  ],
+  [
+    4,
+    "Seq 3.233 [Req 352] Ensure that one RReq message is sent to the DS for each ARes message with Transaction Status = D.",
+    88
+  ],
+  [
+    4,
+    "Seq 3.234 [Req 353] Ensure that:",
+    88
+  ],
+  [
+    3,
+    "Step 9: The DS",
+    88
+  ],
+  [
+    4,
+    "Seq 3.235 [Req 332] Receive the RReq message from the ACS and Validate as defined in Section 5.9.8.",
+    88
+  ],
+  [
+    4,
+    "Seq 3.236 [Req 333] Establish a secure link with the 3DS Server as defined in section 6.1.2.2 using the 3DS Server URL extracted from the AReq message.",
+    88
+  ],
+  [
+    4,
+    "Seq 3.237 [Req 334] Send the RReq message to the 3DS Server using the secure link established in [Req 333].",
+    88
+  ],
+  [
+    3,
+    "Step 10 and Step 11: The 3DS Server",
+    88
+  ],
+  [
+    4,
+    "Seq 3.238 [Req 335] Receive the RReq message or Error Message from the DS and Validate as defined in Section 5.9.9.",
+    88
+  ],
+  [
+    4,
+    "Seq 3.239 [Req 336] Format the RRes message as defined in Table B.9 and send to the DS using the secure link established in [Req 333].",
+    88
+  ],
+  [
+    4,
+    "Seq 3.240 [Req 354] For a Decoupled Authentication transaction, at a minimum wait the specified 3DS Requestor Decoupled Max Time plus 1 hour, 30 seconds for the RReq message. If an RReq message is never received, further processing is outside the scop...",
+    88
+  ],
+  [
+    4,
+    "Seq 3.241 [Req 337] Convey the appropriate response to the 3DS Requestor.",
+    88
+  ],
+  [
+    3,
+    "Step 12: The DS",
+    89
+  ],
+  [
+    4,
+    "Seq 3.242 [Req 338] Receive the RRes message or Error Message from the 3DS Server and Validate as defined in Section 5.9.10.",
+    89
+  ],
+  [
+    4,
+    "Seq 3.243 [Req 339] Log the transaction information as required by the DS.",
+    89
+  ],
+  [
+    4,
+    "Seq 3.244 [Req 340] Send the RRes message to the ACS as received from the 3DS Server using the secure link established in [Req 350].",
+    89
+  ],
+  [
+    3,
+    "Step 13: The ACS",
+    89
+  ],
+  [
+    4,
+    "Seq 3.245 [Req 341] Receive and log the RRes message or Error Message from the DS and Validate as defined in Section 5.9.11.",
+    89
+  ],
+  [
+    2,
+    "3.5 SPC-based Authentication Requirements",
+    89
+  ],
+  [
+    3,
+    "3.5.1 3DS Requestor Initiates SPC Authentication",
+    89
+  ],
+  [
+    4,
+    "Seq 3.246 [Req 447] The 3DS Requestor Website shall display the Processing screen as per the requirements in Section 4.3.1.1 until the SPC API is invoked in Step 10a.",
+    90
+  ],
+  [
+    4,
+    "Seq 3.247 [Req 448] The 3DS Server shall set the 3DS Requestor SPC Support = Y in the AReq message.",
+    90
+  ],
+  [
+    4,
+    "Seq 3.248 [Req 449] If the ACS determines that SPC is the selected authentication method, the ACS shall return the following:",
+    90
+  ],
+  [
+    4,
+    "Step 10:  The 3DS Server",
+    91
+  ],
+  [
+    5,
+    "Seq 3.249 [Req 443] If Transaction Status = S (SPC authentication performed by the 3DS Requestor):",
+    91
+  ],
+  [
+    4,
+    "Step 10a: The 3DS Requestor",
+    91
+  ],
+  [
+    5,
+    "Seq 3.250 [Req 450] The 3DS Requestor shall not change or store any of the data received for the SPC authentication from the 3DS Server.",
+    91
+  ],
+  [
+    4,
+    "Step 10b: The Cardholder",
+    91
+  ],
+  [
+    4,
+    "Step 10c: The 3DS Requestor",
+    91
+  ],
+  [
+    4,
+    "Step 10d: The 3DS Requestor",
+    91
+  ],
+  [
+    4,
+    "Step 10e: The 3DS Server",
+    91
+  ],
+  [
+    5,
+    "Seq 3.251 [Req 444] Include the following in the AReq message:",
+    91
+  ],
+  [
+    4,
+    "Step 10f:  The DS",
+    92
+  ],
+  [
+    5,
+    "Seq 3.252 [Req 451] If the DS evaluates the Assertion Data on behalf of the ACS, the DS shall include the verification result in the corresponding DS Authentication Information Verification Indicator.",
+    92
+  ],
+  [
+    4,
+    "Step 10g: The ACS",
+    92
+  ],
+  [
+    4,
+    "Step 10h: The DS",
+    92
+  ],
+  [
+    4,
+    "Step 10i:  The 3DS Server",
+    92
+  ],
+  [
+    3,
+    "3.5.2 The ACS Initiates SPC Authentication",
+    92
+  ],
+  [
+    1,
+    "4 EMV 3-D Secure User Interface Templates, Requirements and Guidelines",
+    94
+  ],
+  [
+    2,
+    "4.1 3-D Secure User Interface Templates",
+    94
+  ],
+  [
+    3,
+    "Seq 4.1 [Req 314] Support all Device Rendering Options.",
+    96
+  ],
+  [
+    3,
+    "Seq 4.2 [Req 395] Support the UI template orientation(s) (i.e., portrait and landscape) according to the App Screen Orientation.",
+    96
+  ],
+  [
+    3,
+    "Seq 4.3 [Req 358] For the Native UI Type, display UI data elements provided by the ACS within the applicable zones as defined in Table A.20 and depicted in Figure 4.1 and Figure 4.2. The expected format is depicted in Sections 4.2.3 and 4.2.6.",
+    96
+  ],
+  [
+    3,
+    "Seq 4.4 [Req 418] Support full-screen vertical and horizontal scrolling for HTML UI, and at minimum, support full-screen vertical scrolling for the Native UI, for all ACS-provided content. The Header zone may remain anchored at the top of the display.",
+    96
+  ],
+  [
+    3,
+    "Seq 4.5 [Req 391] Ensure that the Header zone for the UI does not occupy more than 10 percent of the screen height.",
+    96
+  ],
+  [
+    3,
+    "Seq 4.6 [Req 342] Support all ACS Rendering Types for the ACS supported authentication methods, at a minimum at least one ACS UI Template for each ACS Interface in addition to the Information UI template.",
+    96
+  ],
+  [
+    3,
+    "Seq 4.7 [Req 359] For the App-based HTML UI Type and Browser-based UI, create HTML with form elements within the applicable zones as outlined in Figure 4.1 and Figure 4.2. The format is outlined in Sections 4.2.6 and 4.3.3.",
+    96
+  ],
+  [
+    2,
+    "4.2 App-based User Interface Overview",
+    98
+  ],
+  [
+    3,
+    "4.2.1 Processing Screen Requirements",
+    99
+  ],
+  [
+    4,
+    "4.2.1.1 3DS SDK/3DS Requestor App",
+    100
+  ],
+  [
+    5,
+    "Seq 4.8 [Req 141] Create a Processing screen for display during AReq/ARes message cycle.",
+    100
+  ],
+  [
+    5,
+    "Seq 4.9 [Req 142] Not include any other design element or text in the Processing screen.",
+    100
+  ],
+  [
+    5,
+    "Seq 4.10 [Req 143] Integrate the Processing Graphic and if requested, the DS logo into the centre of the Processing screen as depicted in Figure 4.7 and Figure 4.8 with or without a white box.",
+    100
+  ],
+  [
+    5,
+    "Seq 4.11 [Req 144] Store the DS logo.",
+    101
+  ],
+  [
+    5,
+    "Seq 4.12 [Req 145] Display the Processing screen supplied by the 3DS SDK during the entire AReq/ARes message cycle and overlay on the Merchant checkout page as depicted in Figure 4.7 and Figure 4.8.",
+    101
+  ],
+  [
+    5,
+    "Seq 4.13 [Req 146] Display the Processing screen for a minimum of two seconds.",
+    101
+  ],
+  [
+    5,
+    "Seq 4.14 [Req 388] Set the Header zone text and the Cancel action name to be displayed by the 3DS SDK.",
+    101
+  ],
+  [
+    5,
+    "Seq 4.15 [Req 147] Create the Processing screen with only the default Processing Graphic (for example, a progress bar or a spinning wheel) of the Consumer Device OS without words, text or white box (See Figure 4.9–Figure 4.12).",
+    101
+  ],
+  [
+    5,
+    "Seq 4.16 [Req 148] Not include the DS logo or any other design element in the Processing screen.",
+    101
+  ],
+  [
+    5,
+    "Seq 4.17 [Req 151] Display the Processing screen for a minimum of one second during the second and subsequent CReq/CRes message cycle. (For the first CReq/CRes message cycle, see [Req 153]).",
+    101
+  ],
+  [
+    5,
+    "Seq 4.18 [Req 389] Ensure that the Cancel action is not actionable while displaying the Processing screen.",
+    101
+  ],
+  [
+    3,
+    "4.2.2 Native UI Display Requirements",
+    104
+  ],
+  [
+    4,
+    "4.2.2.1 3DS SDK/ACS",
+    105
+  ],
+  [
+    5,
+    "Seq 4.19 [Req 362] For the ACS UI Type and the App Screen Orientation, display all the provided UI data elements in their applicable zones and order as defined in Table A.20 and depicted in Figure 4.1 and Figure 4.2. The expected format is depicted in...",
+    105
+  ],
+  [
+    5,
+    "Seq 4.20 [Req 398] For the ACS UI Type, the 3DS SDK returns to the ACS an Error Message (as defined in Section A.9) with Error Component = C and Error Code = 201 if any mandatory UI data elements are missing as defined in Table A.20.",
+    105
+  ],
+  [
+    5,
+    "Seq 4.21 [Req 363] Interpret and place the carriage return on the screen when provided in the CRes message by the ACS.",
+    105
+  ],
+  [
+    5,
+    "Seq 4.22 [Req 364] Not display any UI elements other than those provided in the CRes message by the ACS in the Branding, Challenge/Processing and Information zones.",
+    105
+  ],
+  [
+    5,
+    "Seq 4.23 [Req 365] Display the Expandable Information Label as a graphical control element that can be expanded (for example, an accordion).",
+    105
+  ],
+  [
+    5,
+    "Seq 4.24 [Req 366] Display the Expandable Information Text only when the Cardholder selects the Expandable Information Label.",
+    105
+  ],
+  [
+    5,
+    "Seq 4.25 [Req 367] Display the Why Information Label as a graphical control element that can be expanded (for example, an accordion).",
+    105
+  ],
+  [
+    5,
+    "Seq 4.26 [Req 368] Display the Why Information Text only when the Cardholder selects the Why Information Label.",
+    105
+  ],
+  [
+    5,
+    "Seq 4.27 [Req 369] Provide the Cancel action. This can be implemented as a button in the top corner of the header zone as depicted in Figure 4.1 and Figure 4.2 and/or as a function on a controller for the platform.",
+    105
+  ],
+  [
+    5,
+    "Seq 4.28 [Req 392] Display the Trust List Information Text with the default setting = Off so that a Cardholder action is required to generate a Y value in Trust List Data Entry.",
+    105
+  ],
+  [
+    5,
+    "Seq 4.29 [Req 446] Display the Device Binding Information Text with the default setting = Off so that a Cardholder action is required to generate a Y value in Device Binding Data Entry.",
+    105
+  ],
+  [
+    5,
+    "Seq 4.30 [Req 387] Include only the ACS-chosen UI data elements supported for the selected ACS UI Type as defined in Table A.20.",
+    105
+  ],
+  [
+    5,
+    "Seq 4.31 [Req 370] If used, represent a carriage return as specified in Table A.1 for the following data elements:",
+    106
+  ],
+  [
+    5,
+    "Seq 4.32 [Req 445] If used, represent a bold text as specified in Table A.1 for the following data elements:",
+    106
+  ],
+  [
+    5,
+    "Seq 4.33 [Req 429] Include the image in either png or jpeg format when providing the Issuer Image and Payment System Image.",
+    106
+  ],
+  [
+    3,
+    "4.2.3 Native UI Templates",
+    106
+  ],
+  [
+    3,
+    "4.2.4 Native UI Message Exchange Requirements",
+    123
+  ],
+  [
+    4,
+    "4.2.4.1 3DS SDK",
+    123
+  ],
+  [
+    5,
+    "Seq 4.34 [Req 153] After submitting the CReq message to the ACS, display the same Processing screen as during the AReq/ARes message until the CRes message is received, or timeout is exceeded. Refer to Section 5.5.2.2 for CReq/CRes message timeout requ...",
+    123
+  ],
+  [
+    4,
+    "4.2.4.2 ACS",
+    123
+  ],
+  [
+    4,
+    "4.2.4.3 3DS SDK",
+    123
+  ],
+  [
+    5,
+    "Seq 4.35 [Req 154] Act upon any action to exit the 3DS SDK (for example, the Cancel action on screen or through an external controller) and return control to the 3DS Requestor App.",
+    123
+  ],
+  [
+    5,
+    "Seq 4.36 [Req 155] Control UI interaction processing, for example, the Cancel action.",
+    124
+  ],
+  [
+    5,
+    "Seq 4.37 [Req 156] Have the option to display a screen title.",
+    124
+  ],
+  [
+    5,
+    "Seq 4.38 [Req 157] Return control to the 3DS Requestor App when the Cancel is activated.",
+    124
+  ],
+  [
+    5,
+    "Seq 4.39 [Req 158] Create and generate the CReq message to return to the ACS in response to Cardholder interaction with the UI.",
+    124
+  ],
+  [
+    5,
+    "Seq 4.40 [Req 473] If the Cardholder does not enter any data in the UI, send the Challenge No Entry field with the value = Y in the CReq message.",
+    124
+  ],
+  [
+    3,
+    "4.2.5 HTML UI Display Requirements",
+    124
+  ],
+  [
+    4,
+    "4.2.5.1 3DS SDK/ACS",
+    125
+  ],
+  [
+    5,
+    "Seq 4.41 [Req 371] Display the HTML as provided by the ACS.",
+    125
+  ],
+  [
+    5,
+    "Seq 4.42 [Req 372] Display only the UI elements provided by the ACS in the Branding, Challenge/Processing and Information zones.",
+    125
+  ],
+  [
+    5,
+    "Seq 4.43 [Req 373] Provide the Cancel action. This can be implemented as a button in the top corner of the header zone as depicted in Figure 4.1 and Figure 4.2 and/or as a function on a controller for the platform.",
+    125
+  ],
+  [
+    5,
+    "Seq 4.44 [Req 374] Create HTML with form elements in the applicable zones as outlined in Figure 4.1 and Figure 4.2 to support both portrait and landscape UI templates. The expected format is outlined in Section 4.2.6.",
+    125
+  ],
+  [
+    5,
+    "Seq 4.45 [Req 375] Expandable Information Label for display as a graphical control element that can be expanded (for example, an accordion) in the Information zone.",
+    125
+  ],
+  [
+    5,
+    "Seq 4.46 [Req 376] Expandable Information Text for display in the Information zone only when the Cardholder selects the Expandable Information Label.",
+    125
+  ],
+  [
+    5,
+    "Seq 4.47 [Req 377] Why Information Label for display as a graphical control element that can be expanded (for example, an accordion) in the Information zone.",
+    125
+  ],
+  [
+    5,
+    "Seq 4.48 [Req 378] Why Information Text for display in the Information zone only when the Cardholder selects the Why Information Label.",
+    125
+  ],
+  [
+    3,
+    "4.2.6 HTML UI Templates",
+    125
+  ],
+  [
+    4,
+    "4.2.6.1 HTML Other UI Templates",
+    133
+  ],
+  [
+    3,
+    "4.2.7 HTML Message Exchange Requirements",
+    135
+  ],
+  [
+    4,
+    "4.2.7.1 3DS SDK",
+    135
+  ],
+  [
+    5,
+    "Seq 4.49 [Req 159] After submitting the CReq message to the ACS, display the 3DS App Processing screen until the CRes message is received or timeout exceeded.",
+    135
+  ],
+  [
+    4,
+    "4.2.7.2 ACS",
+    135
+  ],
+  [
+    5,
+    "Seq 4.50 [Req 160] Ensure the HTML provided does not contain external references, either navigation attempts or external resource requests.",
+    135
+  ],
+  [
+    5,
+    "Seq 4.51 [Req 161] Embed CSS and image data to be processed and rendered within the web view entirely within the HTML.",
+    135
+  ],
+  [
+    5,
+    "Seq 4.52 [Req 162] Provide a fully formed HTML document, including CSS and logos, following Responsive Design principles.",
+    135
+  ],
+  [
+    5,
+    "Seq 4.53 [Req 163] Embed all resources in the ACS-provided HTML and not fetched via external URLs.",
+    135
+  ],
+  [
+    5,
+    "Seq 4.54 [Req 164] Include in the ACS HTML an action which triggers a location change to a specified (HTTPS://EMV3DS/challenge) URL upon the Cardholder completing data input and pressing Submit, for ACS UI Type = 05, and only if manual app switching i...",
+    135
+  ],
+  [
+    5,
+    "Seq 4.55 [Req 165] Not bypass the 3DS SDK or connect back to itself directly.",
+    135
+  ],
+  [
+    4,
+    "4.2.7.3 3DS SDK",
+    136
+  ],
+  [
+    5,
+    "Seq 4.56 [Req 166] Extract the HTML data from the ACS HTML data element and display the requested content upon receiving the CRes message from the ACS.",
+    136
+  ],
+  [
+    5,
+    "Seq 4.57 [Req 167] Intercept and block any requests by the web view to fetch external resources.",
+    136
+  ],
+  [
+    5,
+    "Seq 4.58 [Req 168] Build a view that includes the 3DS Requestor header and place at the top of the view containing the ACS HTML as specified in the HTML UI templates.",
+    136
+  ],
+  [
+    5,
+    "Seq 4.59 [Req 169] Use a web view to display the UI to the Cardholder (WebView, View Controller, etc.).",
+    136
+  ],
+  [
+    5,
+    "Seq 4.60 [Req 170] Process Cardholder actions, for example the Cancel action.",
+    136
+  ],
+  [
+    5,
+    "Seq 4.61 [Req 171] Return control to the 3DS Requestor App when the Cancel action is selected.",
+    136
+  ],
+  [
+    5,
+    "Seq 4.62 [Req 413] Monitor the URL changes, to retrieve the Cardholder response as query parameters from the URL (HTTPS://EMV3DS/challenge) and return a parameter string (HTML Action = GET) containing the Cardholder data input.",
+    136
+  ],
+  [
+    5,
+    "Seq 4.63 [Req 393] Pass the received data input, unchanged, to the ACS in the Challenge HTML Data Entry data element of the CReq message. The 3DS SDK shall not modify or reformat this received data input.",
+    136
+  ],
+  [
+    5,
+    "Seq 4.64 [Req 474] When the Cardholder submits their response, if the 3DS SDK receives a blank response, then it assumes that the HTML is not valid. In this event, the 3DS SDK shall return to the ACS an Error Message (as defined in Section A.9) with E...",
+    136
+  ],
+  [
+    2,
+    "4.3 Browser-based User Interface Overview",
+    137
+  ],
+  [
+    3,
+    "4.3.1 Processing Screen Requirements",
+    137
+  ],
+  [
+    4,
+    "4.3.1.1 3DS Requestor Website",
+    137
+  ],
+  [
+    5,
+    "Seq 4.65 [Req 172] Create a Processing screen with a Processing Graphic (for example, a progress bar or a spinning wheel) for display during the AReq/ARes message cycle.",
+    137
+  ],
+  [
+    5,
+    "Seq 4.66 [Req 173] Display the Processing screen that conveys to the Cardholder that processing is occurring. Refer to Figure 4.50 and Figure 4.51 for examples.",
+    137
+  ],
+  [
+    5,
+    "Seq 4.67 [Req 174] Include the DS logo for display with or without a white box at the centre of the screen unless specifically requested not to include.",
+    137
+  ],
+  [
+    5,
+    "Seq 4.68 [Req 175] Not include any other design element or text in the Processing screen.",
+    137
+  ],
+  [
+    5,
+    "Seq 4.69 [Req 176] Display the Processing screen for a minimum of two seconds.",
+    137
+  ],
+  [
+    4,
+    "4.3.1.2 ACS",
+    137
+  ],
+  [
+    5,
+    "Seq 4.70 [Req 177] Create and maintain versions of the HTML that correspond to the sizes of the Challenge Window Size data element as defined in Table A.1 and provide the appropriate size in the CRes message based upon the Challenge Window Size that w...",
+    137
+  ],
+  [
+    5,
+    "Seq 4.71 [Req 178] Create a Processing screen without words, text or white box for display during the HTML exchange CReq/CRes message cycle.",
+    137
+  ],
+  [
+    5,
+    "Seq 4.72 [Req 181] Not include the DS logo or any other design element in the Processing screen.",
+    137
+  ],
+  [
+    5,
+    "Seq 4.73 [Req 179] Display a graphical element (for example, a progress bar or a spinning wheel) within the Challenge/Processing zone that conveys to the consumer that processing is occurring.",
+    137
+  ],
+  [
+    5,
+    "Seq 4.74 [Req 180] Include the DS logo in the HTML for display in the Branding Zone unless specifically requested not to include.",
+    137
+  ],
+  [
+    5,
+    "Seq 4.75 [Req 182] Display the Processing screen for a minimum of one second.",
+    137
+  ],
+  [
+    5,
+    "Seq 4.76 [Req 183] Ensure Browser compatibility, by using a commercial CA that is supported by major Browsers.",
+    138
+  ],
+  [
+    3,
+    "4.3.2 Browser Display Requirements",
+    138
+  ],
+  [
+    4,
+    "4.3.2.1 ACS",
+    138
+  ],
+  [
+    5,
+    "Seq 4.77 [Req 380] Create HTML with form elements in the applicable zones as outlined in Figure 4.1 and Figure 4.2 to support both portrait and landscape UI templates. The format is outlined in the UI templates in Section 4.3.3.",
+    138
+  ],
+  [
+    5,
+    "Seq 4.78 [Req 381] Expandable Information Label for display as a graphical control element that can be expanded (for example, an accordion) in the Information zone.",
+    138
+  ],
+  [
+    5,
+    "Seq 4.79 [Req 382] Expandable Information Text for display in the Information zone only when the Cardholder selects the Expandable Information Label.",
+    138
+  ],
+  [
+    5,
+    "Seq 4.80 [Req 383] Why Information Label for display as a graphical control element that can be expanded (for example, an accordion) in the Information zone.",
+    138
+  ],
+  [
+    5,
+    "Seq 4.81 [Req 384] Why Information Text for display in the Information zone when the Cardholder selects the Why Information Label.",
+    138
+  ],
+  [
+    3,
+    "4.3.3 Browser UI Templates",
+    139
+  ],
+  [
+    2,
+    "4.4 3RI Considerations",
+    144
+  ],
+  [
+    1,
+    "5 EMV 3-D Secure Message Handling Requirements",
+    145
+  ],
+  [
+    2,
+    "5.1 General Message Handling",
+    145
+  ],
+  [
+    3,
+    "5.1.1 HTTP POST",
+    145
+  ],
+  [
+    4,
+    "Seq 5.1 [Req 184] All 3-D Secure message requests shall be sent via HTTP POST as defined in RFC 7231 over a secured connection as defined in Section 6.1.",
+    145
+  ],
+  [
+    4,
+    "Seq 5.2 [Req 185] Messages exchanged between 3-D Secure components shall be in the JSON data interchange format as defined in RFC 7159, or JWE/JWS object format as defined in RFC 7516/RFC 7515.",
+    145
+  ],
+  [
+    4,
+    "Seq 5.3 [Req 186] The body of the HTTP message shall contain the JSON message properly formatted using the JSON required UTF-8 character set as defined in RFC 7159, or JWE/JWS object format as defined in RFC 7516/RFC 7515. To maximise the message cont...",
+    145
+  ],
+  [
+    4,
+    "Seq 5.4 [Req 187] Hypertext Transfer Protocol—HTTP/1.1 or greater shall be used for connectivity. Refer to RFC 2616 for detail on HTTP/1.1.",
+    145
+  ],
+  [
+    4,
+    "Seq 5.5 [Req 188] If chunked transfer coding is not used, the Content-Length: header shall be present (and set to the length of the message body). Refer to RFC 2616 for detail on HTTP/1.1 chunked transfer coding.",
+    145
+  ],
+  [
+    4,
+    "Seq 5.6 [Req 189] Responses shall be formatted as defined in Section 5.1.2 (including the formatting and Content-Type header) and sent in the reply to the HTTP POST.",
+    145
+  ],
+  [
+    4,
+    "Seq 5.7 [Req 313] Cryptographic keys exchanged between 3-D Secure components shall be in the JWK object format as defined in RFC 7517.",
+    145
+  ],
+  [
+    3,
+    "5.1.2 HTTP Header—Content-Type",
+    145
+  ],
+  [
+    4,
+    "Seq 5.8 [Req 190] The HTTP headers shall contain the Content-Type Header: application/JSON; and include charset of UTF-8 for the following messages:",
+    145
+  ],
+  [
+    4,
+    "Seq 5.9 [Req 191] The Content-Type Header requirements for CReq/CRes are:",
+    146
+  ],
+  [
+    4,
+    "Seq 5.10 [Req 468] For the AReq, CReq, RReq, OReq or PReq messages, the 3DS component sending the message shall include its own Transaction ID using the X-Request-ID in the HTTP header, as defined in Table A.29.",
+    146
+  ],
+  [
+    4,
+    "Seq 5.11 [Req 469] For the ARes, CRes, RRes, ORes or PRes messages, the 3DS component sending the message shall include its own Transaction ID using X-Response-ID and the sender Transaction ID received in the Request message (not in the HTTP header) u...",
+    146
+  ],
+  [
+    3,
+    "5.1.3 Base64/Base64url-Encoding",
+    146
+  ],
+  [
+    4,
+    "Seq 5.12 [Req 192] The methods of encoding shall follow:",
+    146
+  ],
+  [
+    4,
+    "Seq 5.13 [Req 193] Base64-decoding software shall ignore any white space (such as carriage returns or line ends) within Base64-encoded data and shall not treat the presence of such characters as an error.",
+    146
+  ],
+  [
+    3,
+    "5.1.4 Protocol and Message Version Numbers",
+    146
+  ],
+  [
+    4,
+    "Seq 5.14 [Req 195] Any Message Version Number not indicated as active in EMV Specification Bulletin 255 shall be returned as an error. The 3-D Secure component shall return an Error Message (as defined in Section A.9)  with the applicable Error Compon...",
+    146
+  ],
+  [
+    4,
+    "Seq 5.15 [Req 320] The Message Version Number is set by the 3-D Secure component initiating the 3DS message and the 3-D Secure components shall validate that the Message Version Number remains unchanged throughout the 3-D Secure transaction. The 3-D S...",
+    147
+  ],
+  [
+    3,
+    "5.1.5 Data Version Numbers",
+    147
+  ],
+  [
+    4,
+    "Seq 5.16 [Req 396] The 3DS SDK shall support the latest Data Version of the 3DS SDK Device Information.",
+    147
+  ],
+  [
+    4,
+    "Seq 5.17 [Req 397] The ACS shall support all active Data Versions of the 3DS SDK Device Information.",
+    147
+  ],
+  [
+    3,
+    "5.1.6 Message Parsing",
+    147
+  ],
+  [
+    4,
+    "Seq 5.18 [Req 196] Message meets applicable requirements as defined in Annex A.",
+    147
+  ],
+  [
+    4,
+    "Seq 5.19 [Req 197] Context of the transaction is valid for the receiving component based on the Message Type field.",
+    147
+  ],
+  [
+    4,
+    "Seq 5.20 [Req 198] 3-D Secure message is properly formatted as a JSON message as defined in RFC 7159 or JWE/JWS object format as defined in RFC 7516/7515.",
+    147
+  ],
+  [
+    4,
+    "Seq 5.21 [Req 199] Message Type field is valid for the receiving component.",
+    147
+  ],
+  [
+    4,
+    "Seq 5.22 [Req 200] The 3DS SDK shall only accept the following messages: CRes or Error Message. Any other message type shall be treated as an error.",
+    147
+  ],
+  [
+    4,
+    "Seq 5.23 [Req 201] The 3DS Server shall only accept the following messages: ARes, RReq, PRes, OReq or Error Message. Any other message types shall be treated as an error.",
+    147
+  ],
+  [
+    4,
+    "Seq 5.24 [Req 202] The DS shall only accept the following messages: AReq, ARes, RReq, RRes, PReq, ORes or Error Message. Any other message types shall be treated as an error.",
+    147
+  ],
+  [
+    4,
+    "Seq 5.25 [Req 203] The ACS shall only accept the following messages: AReq, CReq, RRes, OReq or Error Message. Any other message types shall be treated as an error.",
+    147
+  ],
+  [
+    4,
+    "Seq 5.26 [Req 430] If the 3DS Server receives more than one RReq message during a transaction, then it shall return Error Code = 312.",
+    147
+  ],
+  [
+    4,
+    "Seq 5.27 [Req 431] If the 3DS Server receives an RReq message and the Transaction Status does not = C or D or S in the corresponding ARes message, then it shall return Error Code = 313.",
+    148
+  ],
+  [
+    4,
+    "Seq 5.28 [Req 432] If the DS receives more than one RReq message during a transaction, then it shall return Error Code = 312.",
+    148
+  ],
+  [
+    4,
+    "Seq 5.29 [Req 433] If the DS receives an RReq message and the Transaction Status does not = C or D or S in the corresponding ARes message, then it shall return Error Code = 313.",
+    148
+  ],
+  [
+    3,
+    "5.1.7 Message Content Validation",
+    148
+  ],
+  [
+    4,
+    "Seq 5.30 [Req 204] All Required fields for the Message Type received shall be present as defined in Table A.1.",
+    148
+  ],
+  [
+    4,
+    "Seq 5.31 [Req 205] All Conditional fields for the Message Type received shall be present when the source component determines the conditions for presence are met as defined in Table A.1.",
+    148
+  ],
+  [
+    4,
+    "Seq 5.32 [Req 206] Required, Conditional, and Optional fields contained in the Message Type shall meet formatting and length criteria as specified in Table A.1.",
+    148
+  ],
+  [
+    4,
+    "Seq 5.33 [Req 309] Unless explicitly noted, if a conditionally optional or optional field is sent as empty or null, the receiving component shall return an Error Message (as defined in Section A.9) with the applicable Error Component and Error Code = ...",
+    148
+  ],
+  [
+    4,
+    "Seq 5.34 [Req 207] To support future versions of the protocol, implementations shall not use (or configure) JSON content parsers that validate strictly. If the message is syntactically correct and the validation criteria for the Message Type are met a...",
+    148
+  ],
+  [
+    4,
+    "Seq 5.35 [Req 208] If the content validation for the Message Type received does not pass validation criteria as defined in Table A.1, then the message shall be treated as an error.",
+    148
+  ],
+  [
+    4,
+    "Seq 5.36 [Req 209] If there are additional data elements received that are not specified for the Message Type, Device Channel and Message Category but the message otherwise passes validation, the message shall be considered valid.",
+    148
+  ],
+  [
+    4,
+    "Seq 5.37 [Req 210] All 3-D Secure components shall ignore unrecognised non-critical extension name/value pairs (that is, any extension that does not have a criticality attribute with a value = true) and pass them.",
+    149
+  ],
+  [
+    4,
+    "Seq 5.38 [Req 434] If the value of a data element is in the range of “Reserved for EMVCo future use”, all 3DS components shall return an Error Message (as defined in Section A.9) with the applicable Error Component and Error Code = 207.",
+    149
+  ],
+  [
+    4,
+    "Seq 5.39 [Req 212] 3-D Secure components shall ensure response message data elements as defined in Table A.1, including Transaction IDs and Reference Numbers match that of the corresponding request message.",
+    149
+  ],
+  [
+    4,
+    "Seq 5.40 [Req 213] Upon finding any message data elements that do not pass format validation, the validating component shall generate a response message having the Error Detail include the data element name(s) of the incorrect elements populated. Refe...",
+    149
+  ],
+  [
+    2,
+    "5.2 Partial System Outages",
+    149
+  ],
+  [
+    3,
+    "Seq 5.41 [Req 215] When system failures are detected, the system shall stop accepting requests until the failure has been corrected and an Error Message as defined in Section A.9 with the applicable Error Component and an Error Code = 403 or 404 shall...",
+    149
+  ],
+  [
+    2,
+    "5.3 3-D Secure Component Availability",
+    150
+  ],
+  [
+    2,
+    "5.4 Error Codes",
+    150
+  ],
+  [
+    3,
+    "Seq 5.42 [Req 216] All 3-D Secure components shall accept any value in the Error Code field.",
+    150
+  ],
+  [
+    3,
+    "Seq 5.43 [Req 217] If the list of Error Code values in Table A.4 does not contain an entry that matches a condition detected by a 3-D Secure component, a reasonably close match shall be used.",
+    150
+  ],
+  [
+    3,
+    "Seq 5.44 [Req 218] For Error Codes 201, 203, 204 and 304, the 3-D Secure component that identifies the error shall include the name(s) of the erroneous data element(s) in the Error Detail.",
+    150
+  ],
+  [
+    2,
+    "5.5 Timeouts",
+    150
+  ],
+  [
+    3,
+    "5.5.1 Transaction Timeouts",
+    150
+  ],
+  [
+    4,
+    "Seq 5.45 [Req 219] Maintain the state of a 3-D Secure transaction when the ARes message contains Transaction Status = C so that the corresponding CReq message can be processed and timeout values can be enforced.",
+    150
+  ],
+  [
+    4,
+    "Seq 5.46 [Req 220] Upon sending an ARes message with Transaction Status = C, set a timeout value of 30 seconds for the receipt of the initial corresponding CReq message from the 3DS SDK or 3DS Requestor.",
+    150
+  ],
+  [
+    4,
+    "Seq 5.47 [Req 221] If the transaction reaches the 30-second timeout expiry and an Error Message has not been received from the DS for this transaction, send an RReq message to the DS with Transaction Status = N, Transaction Status Reason = 14 (Transac...",
+    151
+  ],
+  [
+    4,
+    "Seq 5.48 [Req 222] Upon receiving a CReq message for a transaction that has timed-out, send an Error Message (as defined in Section A.9) with Error Component = A and Error Code = 402 to the 3DS SDK (for an App-based transaction) or 3DS Requestor (for ...",
+    151
+  ],
+  [
+    4,
+    "Seq 5.49 [Req 223] Set a timeout value of 10 minutes (or 600 seconds) after successfully sending each CRes message to the 3DS SDK.",
+    151
+  ],
+  [
+    4,
+    "Seq 5.50 [Req 224] If the timeout expires before receiving the next CReq message from the 3DS SDK, send an RReq message within 60 seconds to the DS to be passed to the 3DS Server with Transaction Status = N, Transaction Status Reason = 14 (Transaction...",
+    151
+  ],
+  [
+    4,
+    "Seq 5.51 [Req 225] Upon receiving the CReq message for a transaction that has timed out, send an Error Message (as defined in Section A.9) with Error Component = A and Error Code = 402 to the 3DS SDK.",
+    151
+  ],
+  [
+    4,
+    "Seq 5.52 [Req 226] Set a timeout value of 10 minutes (or 600 seconds) after successfully sending each challenge interface to the challenge iframe.",
+    151
+  ],
+  [
+    4,
+    "Seq 5.53 [Req 227] If the timeout expires before Cardholder authentication can complete, send an RReq message within 60 seconds to the DS to be passed to the 3DS Server with Transaction Status = N and Transaction Status Reason = 14.",
+    151
+  ],
+  [
+    4,
+    "Seq 5.54 [Req 344] Close the challenge iframe by refreshing the parent page and removing the HTML iframe.",
+    151
+  ],
+  [
+    4,
+    "Seq 5.55 [Req 452] Set a timeout value of 10 minutes (or 600 seconds) after sending the first ARes message.",
+    151
+  ],
+  [
+    4,
+    "Seq 5.56 [Req 453] If the timeout expires before the second AReq message is received, send an RReq message within 60 seconds to the DS, to be passed to the 3DS Server, with Transaction Status = N and Transaction Status Reason = 14.",
+    152
+  ],
+  [
+    4,
+    "Seq 5.57 [Req 454] Set a timeout value of 9 minutes (or 540 seconds) after successfully providing the SPC data to the 3DS Requestor.",
+    152
+  ],
+  [
+    4,
+    "Seq 5.58 [Req 455] If the timeout expires before receiving the Assertion Data from the 3DS Requestor, send the second AReq message to the ACS with SPC Incompletion Indicator = 03 and without the 3DS Requestor Authentication Information.",
+    152
+  ],
+  [
+    3,
+    "5.5.2 Read Timeouts",
+    152
+  ],
+  [
+    4,
+    "5.5.2.1 AReq/ARes Message Timeouts",
+    152
+  ],
+  [
+    5,
+    "Seq 5.59 [Req 228] The 3DS Server and ACS shall set appropriate AReq and ARes message timeout values, as set by DS requirements when communicating with each DS separately.",
+    152
+  ],
+  [
+    5,
+    "Seq 5.60 [Req 229] Any failure to complete the initial TCP/IP connection and TLS handshake to the DS shall result in an immediate retry or the 3DS Server shall try an alternate DS (if available). Upon second failure, the 3DS Server shall send an error...",
+    152
+  ],
+  [
+    5,
+    "Seq 5.61 [Req 231] Set the read timeout value as defined by the DS receiving the request from the time the TLS handshake has completed and the full AReq message is sent for processing.",
+    152
+  ],
+  [
+    5,
+    "Seq 5.62 [Req 232] If the DS has not responded with the ARes message before the 3DS Server read time expiry, the 3DS Server shall close the connection and result in a failed 3-D Secure transaction.",
+    152
+  ],
+  [
+    5,
+    "Seq 5.63 [Req 233] Any failure to complete the initial TCP/IP connection and TLS handshake to the ACS shall result in an immediate retry or the DS shall try an alternate ACS (if available). Upon second failure, the DS shall send:",
+    153
+  ],
+  [
+    5,
+    "Seq 5.64 [Req 424] If all attempts to successfully connect to the ACS fail, then the DS may send an Error Message (as defined in Section A.9) with Error Component = D and Error Code = 405 to the ACS.",
+    153
+  ],
+  [
+    5,
+    "Seq 5.65 [Req 234] The DS shall set the ACS timeout value (as defined in the relevant DS requirements) from the time the TLS handshake has completed and the full AReq message is sent for processing to the ACS.",
+    153
+  ],
+  [
+    5,
+    "Seq 5.66 [Req 235] If the DS has not received the ARes message from the ACS before the read timeout expiry, the DS shall send:",
+    153
+  ],
+  [
+    5,
+    "Seq 5.67 [Req 236] Any failure to complete the initial connection and TLS handshake to the ACS shall result in an immediate retry. Upon second failure, the 3DS SDK shall report an error to the 3DS Requestor App to complete the transaction.",
+    153
+  ],
+  [
+    5,
+    "Seq 5.68 [Req 237] The 3DS SDK shall set a 10 second timeout value from the time the TLS handshake has completed and the full CReq message is sent for processing to the ACS.",
+    153
+  ],
+  [
+    5,
+    "Seq 5.69 [Req 239] If the ACS does not respond with the CRes message before the 3DS SDK 10-second read timeout expiry, the 3DS SDK ends 3-D Secure processing, passes an Error Message (as defined in Section A.9) to the ACS with Error Component = C and ...",
+    153
+  ],
+  [
+    5,
+    "Seq 5.70 [Req 312] The 3DS SDK shall set the SDK Maximum Timeout value from the time the TLS handshake has completed and the first CReq message is sent for processing to the ACS.",
+    153
+  ],
+  [
+    4,
+    "5.5.2.2 RReq/RRes Message Timeouts",
+    154
+  ],
+  [
+    5,
+    "Seq 5.71 [Req 240] Any failure to complete the initial connection and TLS handshake to the DS shall result in an immediate retry. Upon second failure, the ACS will wait 10 seconds and retry to connect to the DS until the message is delivered with Tran...",
+    154
+  ],
+  [
+    5,
+    "Seq 5.72 [Req 241] The ACS shall set a 5-second timeout value from the time the TLS handshake has completed and the full RReq message is sent for processing to the DS.",
+    154
+  ],
+  [
+    5,
+    "Seq 5.73 [Req 242] If the DS has not responded with the RRes message or an Error Message before the read timeout expiry, the ACS shall return to the DS an Error Message (as defined in Section A.9) with Error Component = A and Error Code = 402. The def...",
+    154
+  ],
+  [
+    5,
+    "Seq 5.74 [Req 243] Any failure to complete the initial connection and TLS handshake to the 3DS Server shall result in an immediate retry. Upon second failure, the DS shall send an Error Message (as defined in Section A.9) with Error Component = D and ...",
+    154
+  ],
+  [
+    5,
+    "Seq 5.75 [Req 244] Shall set a timeout value from the time the TLS handshake has completed and the full RReq message is sent for processing to the 3DS Server URL. The default timeout value is 3 seconds. However, a DS may specify a higher alternative v...",
+    154
+  ],
+  [
+    5,
+    "Seq 5.76 [Req 245] If the 3DS Server has not sent the RRes message before the 3-second (or DS alternative value) read timeout expiry, the DS shall send an Error Message (as defined in Section A.9) with Error Component = D and Error Code = 402 to the A...",
+    154
+  ],
+  [
+    2,
+    "5.6 PReq/PRes Message Handling Requirements",
+    154
+  ],
+  [
+    3,
+    "Seq 5.77 [Req 246] Call each registered DS for:",
+    155
+  ],
+  [
+    3,
+    "Seq 5.78 [Req 425] Request the Card Range Data under a compressed format by adding “Accept-Encoding: gzip” to the HTTP request.",
+    155
+  ],
+  [
+    3,
+    "Seq 5.79 [Req 456] Support Range Requests, as defined by RFC 7233, if the Card Range Data Download Indicator is present in the PReq message.",
+    155
+  ],
+  [
+    3,
+    "Seq 5.80 [Req 247] Send the PReq message via a secure link with the DS established as defined in Section 6.1.2.1.",
+    155
+  ],
+  [
+    3,
+    "Seq 5.81 [Req 248] Immediately retry a connection upon any failure to complete the initial TCP/IP connection and TLS handshake to the DS.",
+    155
+  ],
+  [
+    3,
+    "Seq 5.82 [Req 249] Upon the second failure to complete the TCP/IP connection and TLS handshake to the DS, end the transaction, and periodically retry within the 24-hour window at 60-second intervals until the transaction completes successfully.",
+    155
+  ],
+  [
+    3,
+    "Seq 5.83 [Req 428] If the DS receives a request without the “Accept-Encoding: gzip” in the header of a 3DS Server HTTP request, not return an Error Message and return the data in an uncompressed format.",
+    155
+  ],
+  [
+    3,
+    "Seq 5.84 [Req 303] Receive and validate the PReq message, as defined in Table B.6:",
+    155
+  ],
+  [
+    3,
+    "Seq 5.85 [Req 457] Support Range Requests, as defined by RFC 7233, for the Card Range Data File download.",
+    156
+  ],
+  [
+    3,
+    "Seq 5.86 [Req 458] Ensure that there is no overlap or conflict in the card ranges contained in the Card Range Data (Start and End of the card range).",
+    156
+  ],
+  [
+    3,
+    "Seq 5.87 [Req 459] Provide in the Card Range Data data element only information about card ranges that are participating in EMV 3-D Secure and are registered with the DS that is responding to the request.",
+    156
+  ],
+  [
+    3,
+    "Seq 5.88 [Req 460] Prepare the Card Range Data File if supported by the DS and if the Card Range Data Download Indicator was present in the PReq message. The Card Range Data File contains the entire list of participating card ranges, e.g. the JSON obj...",
+    156
+  ],
+  [
+    3,
+    "Seq 5.89 [Req 426] Prepare the PRes message and send a response with either:",
+    156
+  ],
+  [
+    3,
+    "Seq 5.90 [Req 250] Send the PRes message containing the DS card range information as defined in the Card Range Data data element defined in Table A.1 or the Card Range Data File URL, if supported.",
+    156
+  ],
+  [
+    3,
+    "Seq 5.91 [Req 304] Receive and validate the PRes message as defined in Table B.7:",
+    156
+  ],
+  [
+    3,
+    "Seq 5.92 [Req 385] Update the cache information for each Card Range Data according to the Action Indicator.",
+    156
+  ],
+  [
+    2,
+    "5.7 App/SDK-based Message Handling",
+    157
+  ],
+  [
+    3,
+    "5.7.1 App-based CReq/CRes Message Handling",
+    157
+  ],
+  [
+    4,
+    "Seq 5.93 [Req 253] The 3DS SDK shall verify the JWS signature found in the ACS Signed Content data element of the ARes message received from the 3DS Server as defined in Section 6.2.3.3 using the pre-installed public key of the DS that was called for ...",
+    157
+  ],
+  [
+    4,
+    "Seq 5.94 [Req 254] The 3DS SDK shall generate JWE objects for the CReq messaging to the ACS using the keys derived from the 3DS SDK’s own ephemeral key and the ACS Ephemeral key received from the 3DS Server.",
+    157
+  ],
+  [
+    2,
+    "5.8 Browser-based Message Handling",
+    158
+  ],
+  [
+    3,
+    "5.8.1 3DS Method Handling",
+    158
+  ],
+  [
+    4,
+    "Seq 5.95 [Req 255] The 3DS Requestor and 3DS Server shall use the cached PRes message data to determine the ACS 3DS Method URL via the Card Range Data data element.",
+    158
+  ],
+  [
+    4,
+    "5.8.1.1 Recent Prior 3DS Method Call Does Not Exist",
+    158
+  ],
+  [
+    5,
+    "Seq 5.96 [Req 256] For the card ranges that contain a 3DS Method URL in the cached PRes message, invoke the 3DS Method.",
+    158
+  ],
+  [
+    5,
+    "Seq 5.97 [Req 257] Invoke the 3DS Method call in advance of the AReq message for the same authentication transaction being sent.",
+    158
+  ],
+  [
+    5,
+    "Seq 5.98 [Req 258] Obtain from the 3DS Server or load from local cache, the 3DS Method URL if it exists for the card range.",
+    158
+  ],
+  [
+    5,
+    "Seq 5.99 [Req 259] The 3DS Method Data shall contain the following data elements (as specified in Table A.1 and Table A.2):",
+    158
+  ],
+  [
+    5,
+    "Seq 5.100 [Req 260] Create a JSON object with the 3DS Method Data elements, then Base64url-encode the JSON object.",
+    159
+  ],
+  [
+    5,
+    "Seq 5.101 [Req 261] Open a hidden HTML iframe in the Cardholder Browser with:",
+    159
+  ],
+  [
+    5,
+    "Seq 5.102 [Req 262] Interact with the Cardholder Browser via the HTML iframe and then store the applicable values with the 3DS Server Transaction ID for use when the AReq message is received containing the same 3DS Server Transaction ID.",
+    159
+  ],
+  [
+    5,
+    "Seq 5.103 [Req 263] Validate the Base64url-encoded threeDSMethodData with or without padding from the initial 3DS POST method, and retrieve the 3DS Server Transaction ID, then Base64url-encode the JSON object and send via a form with a field named thr...",
+    159
+  ],
+  [
+    5,
+    "Seq 5.104 [Req 315] Set the 3DS Method Completion Indicator = Y upon notification from the 3DS Requestor. If the 3DS Method does not complete within 5 seconds, set the 3DS Method Completion Indicator to = N.",
+    159
+  ],
+  [
+    5,
+    "Seq 5.105 [Req 264] Should ensure that any action during the execution of the 3DS Method does not impact the user experience.",
+    159
+  ],
+  [
+    4,
+    "5.8.1.2 Recent Prior 3DS Method Call Does Exist",
+    159
+  ],
+  [
+    5,
+    "Seq 5.106 [Req 415] If the 3DS Requestor has already processed a 3DS Method call with the same Cardholder Account Number on the same device and Browser in the last 10 minutes, then the 3DS Requestor may use the previous 3DS Method execution and choose...",
+    159
+  ],
+  [
+    3,
+    "5.8.2 Browser Challenge iframe Requirements",
+    159
+  ],
+  [
+    4,
+    "Seq 5.107 [Req 265] Select the size of the HTML iframe to be generated by the 3DS Requestor from one of the iframe sizes specified in the Challenge Window Size data element.",
+    160
+  ],
+  [
+    4,
+    "Seq 5.108 [Req 266] Use a server-authenticated TLS session as defined in Section 6.1.4.2.",
+    160
+  ],
+  [
+    4,
+    "Seq 5.109 [Req 267] Create a 3-D Secure challenge iframe by generating a CReq message, creating an HTML iframe in the Cardholder Browser with the following settings:",
+    160
+  ],
+  [
+    4,
+    "Seq 5.110 [Req 268] Post the CReq message containing the selected size in the Challenge Window Size data element to the ACS as defined in Table A.1.",
+    160
+  ],
+  [
+    4,
+    "Seq 5.111 [Req 324] Provide a fallback mechanism for redirection in environments that do not support JavaScript.",
+    160
+  ],
+  [
+    4,
+    "Seq 5.112 [Req 269] Receive the CReq message and respond with the HTML to render the challenge user interface within the iframe.",
+    160
+  ],
+  [
+    4,
+    "Seq 5.113 [Req 270] Close the challenge iframe upon receiving the CRes message by refreshing the parent page and removing the HTML iframe.",
+    160
+  ],
+  [
+    2,
+    "5.9 Message Error Handling",
+    160
+  ],
+  [
+    3,
+    "5.9.1 DS AReq Message Error Handling",
+    161
+  ],
+  [
+    3,
+    "5.9.2 ACS AReq Message Error Handling",
+    161
+  ],
+  [
+    3,
+    "5.9.3 DS ARes Message Error Handling",
+    161
+  ],
+  [
+    4,
+    "5.9.3.1 Message in Error",
+    162
+  ],
+  [
+    4,
+    "5.9.3.2 Error Message Received",
+    162
+  ],
+  [
+    3,
+    "5.9.4 3DS Server ARes Message Error Handling",
+    162
+  ],
+  [
+    3,
+    "5.9.5 ACS CReq Message Error Handling—01-APP",
+    163
+  ],
+  [
+    4,
+    "5.9.5.1 Message in Error",
+    164
+  ],
+  [
+    3,
+    "5.9.6 ACS CReq Message Error Handling—02-BRW",
+    164
+  ],
+  [
+    3,
+    "5.9.7 3DS SDK CRes Message Error Handling",
+    165
+  ],
+  [
+    3,
+    "5.9.8 DS RReq Message Error Handling",
+    165
+  ],
+  [
+    4,
+    "5.9.8.1 Message in Error",
+    166
+  ],
+  [
+    3,
+    "5.9.9 3DS Server RReq Message Error Handling",
+    166
+  ],
+  [
+    3,
+    "5.9.10 DS RRes Message Error Handling",
+    167
+  ],
+  [
+    3,
+    "5.9.11 ACS RRes Message Error Handling—01-APP",
+    167
+  ],
+  [
+    3,
+    "5.9.12 ACS RRes Message Error Handling—02-BRW",
+    168
+  ],
+  [
+    3,
+    "5.9.13 ACS RRes Message Error Handling—03-3RI",
+    169
+  ],
+  [
+    2,
+    "5.10 UTC Date and Time",
+    169
+  ],
+  [
+    3,
+    "Seq 5.114 [Req 416] The maximum desynchronisation with UTC time for the 3DS Server, DS and ACS shall be less than 15 minutes when providing or verifying the UTC date and time data elements.",
+    169
+  ],
+  [
+    3,
+    "Seq 5.115 [Req 417] The ACS may respond to the DS with an Error Message (as defined in Section A.9) with Error Component = A and Error Code = 203 if the SDK Signature Timestamp or Purchase Date & Time data elements are received with a UTC time differe...",
+    169
+  ],
+  [
+    2,
+    "5.11 OReq/ORes Message Handling Requirements",
+    170
+  ],
+  [
+    3,
+    "Seq 5.116 [Req 435] Prepare and send the OReq message or the sequence of OReq messages in the sequence number order via a secure link with the recipient (3DS Server or ACS) established as defined in Table B.10.",
+    170
+  ],
+  [
+    3,
+    "Seq 5.117 [Req 436] Immediately retry a connection upon any failure to complete the initial TCP/IP connection and TLS handshake to the recipient.",
+    170
+  ],
+  [
+    3,
+    "Seq 5.118 [Req 437] Upon the second failure to complete the TCP/IP connection and TLS handshake to the recipient, end the transaction, and periodically retry within the 24-hour window at 60-second intervals until the transaction completes successfully.",
+    170
+  ],
+  [
+    3,
+    "Seq 5.119 [Req 438] Receive and validate all the OReq messages in the sequence as defined in Table B.10:",
+    170
+  ],
+  [
+    3,
+    "Seq 5.120 [Req 439] Prepare and send the ORes message to the DS via the secure link as defined in Table B.11.",
+    170
+  ],
+  [
+    3,
+    "Seq 5.121 [Req 440] Receive and validate the ORes message as defined in Table B.11:",
+    170
+  ],
+  [
+    1,
+    "6 EMV 3-D Secure Security Requirements",
+    172
+  ],
+  [
+    2,
+    "6.1 Links",
+    173
+  ],
+  [
+    3,
+    "6.1.1 Link a: Consumer Device—3DS Requestor",
+    173
+  ],
+  [
+    3,
+    "6.1.2 Link b: 3DS Server—DS",
+    174
+  ],
+  [
+    4,
+    "6.1.2.1 For AReq/ARes",
+    174
+  ],
+  [
+    4,
+    "6.1.2.2 For RReq/RRes",
+    174
+  ],
+  [
+    3,
+    "6.1.3 Link c: DS—ACS",
+    174
+  ],
+  [
+    4,
+    "6.1.3.1 For AReq/ARes",
+    174
+  ],
+  [
+    4,
+    "6.1.3.2 For RReq/RRes",
+    175
+  ],
+  [
+    3,
+    "6.1.4 Link d: 3DS Client—ACS",
+    175
+  ],
+  [
+    4,
+    "6.1.4.1 For App-based CReq/CRes",
+    175
+  ],
+  [
+    4,
+    "6.1.4.2 For Browser-based CReq/CRes",
+    175
+  ],
+  [
+    3,
+    "6.1.5 Link e: 3DS Integrator—Acquirer (Payment Authentication only)",
+    176
+  ],
+  [
+    3,
+    "6.1.6 Link f: Acquirer—Payment System (Payment Authentication only)",
+    176
+  ],
+  [
+    3,
+    "6.1.7 Link g: Payment System—Issuer (Payment Authentication only)",
+    176
+  ],
+  [
+    3,
+    "6.1.8 Link h: Browser—ACS (for 3DS Method)",
+    176
+  ],
+  [
+    2,
+    "6.2 Security Functions",
+    177
+  ],
+  [
+    3,
+    "6.2.1 Function H: Authenticity of the 3DS SDK",
+    177
+  ],
+  [
+    3,
+    "6.2.2 Function I: 3DS SDK Device Information Encryption and Split-SDK Server Signature to DS",
+    177
+  ],
+  [
+    4,
+    "6.2.2.1 3DS SDK Device Information Encryption",
+    178
+  ],
+  [
+    4,
+    "6.2.2.2 DS Device Information Decryption",
+    179
+  ],
+  [
+    4,
+    "6.2.2.3 Split-SDK Server Signature",
+    179
+  ],
+  [
+    4,
+    "6.2.2.4 DS Verification of Split-SDK Server Signed Content",
+    180
+  ],
+  [
+    3,
+    "6.2.3 Function J: 3DS SDK—ACS Secure Channel Set-Up",
+    180
+  ],
+  [
+    4,
+    "6.2.3.1 3DS SDK Preparation for Secure Channel",
+    180
+  ],
+  [
+    4,
+    "6.2.3.2 ACS Secure Channel Setup",
+    180
+  ],
+  [
+    4,
+    "6.2.3.3 3DS SDK Secure Channel Setup",
+    182
+  ],
+  [
+    3,
+    "6.2.4 Function K: 3DS SDK—ACS (CReq, CRes)",
+    182
+  ],
+  [
+    4,
+    "6.2.4.1 3DS SDK—CReq",
+    182
+  ],
+  [
+    4,
+    "6.2.4.2 3DS SDK—CRes",
+    183
+  ],
+  [
+    4,
+    "6.2.4.3 ACS—CReq",
+    183
+  ],
+  [
+    4,
+    "6.2.4.4 ACS—CRes",
+    183
+  ],
+  [
+    1,
+    "Annex A 3-D Secure Data Elements",
+    185
+  ],
+  [
+    2,
+    "A.1 Missing Required Fields",
+    187
+  ],
+  [
+    2,
+    "A.2 Field Edit Criteria",
+    187
+  ],
+  [
+    2,
+    "A.3 Encryption of AReq Data",
+    187
+  ],
+  [
+    2,
+    "A.4 EMV 3-D Secure Data Elements",
+    188
+  ],
+  [
+    2,
+    "A.5 Device Information—01-APP Only",
+    296
+  ],
+  [
+    2,
+    "A.6 Browser Information—02-BRW Only",
+    296
+  ],
+  [
+    2,
+    "A.7 3DS Method Data",
+    297
+  ],
+  [
+    3,
+    "3DS Method Data Examples",
+    299
+  ],
+  [
+    2,
+    "A.8 Browser CReq and CRes POST",
+    299
+  ],
+  [
+    3,
+    "Browser CReq–CRes Data Examples",
+    301
+  ],
+  [
+    2,
+    "A.9 Error Code, Error Description, and Error Detail",
+    303
+  ],
+  [
+    2,
+    "A.10 Excluded ISO Currency and Country Code Values",
+    309
+  ],
+  [
+    2,
+    "A.11 Card Range Data",
+    310
+  ],
+  [
+    3,
+    "Card Range Data Example",
+    314
+  ],
+  [
+    3,
+    "DS URL List Data Example",
+    316
+  ],
+  [
+    3,
+    "A.11.1 Supported Message Extension Data Element",
+    317
+  ],
+  [
+    4,
+    "Supported Message Extension Data Example",
+    318
+  ],
+  [
+    2,
+    "A.12 Message Extension Data",
+    319
+  ],
+  [
+    3,
+    "A.12.1 Message Extension Attributes",
+    321
+  ],
+  [
+    3,
+    "A.12.2 Identification",
+    322
+  ],
+  [
+    3,
+    "A.12.3 Criticality",
+    322
+  ],
+  [
+    2,
+    "A.13 3DS Requestor Risk Information",
+    322
+  ],
+  [
+    3,
+    "A.13.1 Cardholder Account Information",
+    323
+  ],
+  [
+    3,
+    "A.13.2 Merchant Risk Indicator",
+    328
+  ],
+  [
+    3,
+    "A.13.3 3DS Requestor Authentication Information",
+    331
+  ],
+  [
+    3,
+    "A.13.4 3DS Requestor Prior Transaction Authentication Information",
+    334
+  ],
+  [
+    3,
+    "A.13.5 ACS Rendering Type",
+    336
+  ],
+  [
+    4,
+    "JSON Object Example",
+    337
+  ],
+  [
+    3,
+    "A.13.6 Device Rendering Options Supported",
+    338
+  ],
+  [
+    3,
+    "A.13.7 Challenge Data Entry",
+    340
+  ],
+  [
+    3,
+    "A.13.8 Transaction Status Conditions",
+    341
+  ],
+  [
+    3,
+    "A.13.9 Multi-Transaction",
+    343
+  ],
+  [
+    4,
+    "JSON Object Example",
+    346
+  ],
+  [
+    3,
+    "A.13.10  Seller Information",
+    347
+  ],
+  [
+    4,
+    "JSON Object Example",
+    350
+  ],
+  [
+    2,
+    "A.14 UI Data Elements",
+    352
+  ],
+  [
+    3,
+    "A.14.1 Issuer Image",
+    356
+  ],
+  [
+    3,
+    "A.14.2 Payment System Image",
+    357
+  ],
+  [
+    2,
+    "A.15 iframe and Sandbox Attributes",
+    358
+  ],
+  [
+    2,
+    "A.16 3-D Secure Array Fields",
+    360
+  ],
+  [
+    2,
+    "A.17 EMV Payment Token Information",
+    361
+  ],
+  [
+    2,
+    "A.18 Challenge Text Box Settings",
+    363
+  ],
+  [
+    2,
+    "A.19 Broadcast Information",
+    366
+  ],
+  [
+    2,
+    "A.20 Cardholder Information Text",
+    369
+  ],
+  [
+    2,
+    "A.21 SPC Transaction Data",
+    371
+  ],
+  [
+    2,
+    "A.22 HTTP Headers",
+    376
+  ],
+  [
+    1,
+    "Annex B Message Format",
+    377
+  ],
+  [
+    2,
+    "B.1 AReq Message Data Elements",
+    377
+  ],
+  [
+    2,
+    "B.2 ARes Message Data Elements",
+    382
+  ],
+  [
+    2,
+    "B.3 CReq Message Data Elements",
+    384
+  ],
+  [
+    2,
+    "B.4 CRes Message Data Elements",
+    385
+  ],
+  [
+    2,
+    "B.5 Final CRes Message Data Elements",
+    386
+  ],
+  [
+    2,
+    "B.6 PReq Message Data Elements",
+    387
+  ],
+  [
+    2,
+    "B.7 PRes Message Data Elements",
+    388
+  ],
+  [
+    2,
+    "B.8 RReq Message Data Elements",
+    389
+  ],
+  [
+    2,
+    "B.9 RRes Message Data Elements",
+    390
+  ],
+  [
+    2,
+    "B.10 OReq Message Data Elements",
+    391
+  ],
+  [
+    2,
+    "B.11 ORes Message Data Elements",
+    392
+  ],
+  [
+    2,
+    "B.12 Error Message Data Elements",
+    393
+  ],
+  [
+    1,
+    "Annex C Generate ECC Key Pair",
+    394
+  ],
+  [
+    2,
+    "C.1 Input",
+    394
+  ],
+  [
+    2,
+    "C.2 Output",
+    394
+  ],
+  [
+    3,
+    "C.2.1 Process",
+    394
+  ],
+  [
+    1,
+    "Annex D Approved Transport Layer Security Versions",
+    396
+  ],
+  [
+    2,
+    "D.1 Cipher Suites for TLS 1.2",
+    396
+  ],
+  [
+    3,
+    "D.1.1 Supported Cipher Suites",
+    396
+  ],
+  [
+    3,
+    "D.1.2 Other Cipher Suites",
+    396
+  ],
+  [
+    2,
+    "D.2 Not Supported",
+    396
+  ],
+  [
+    1,
+    "Requirements",
+    398
+  ]
+]

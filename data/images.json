@@ -1,0 +1,912 @@
+[
+  {
+    "page": 1,
+    "file": "assets/images/page-001-image-01.png",
+    "caption_en": "Image on PDF page 1",
+    "bbox": [
+      245.1750030517578,
+      42.00001907348633,
+      349.875,
+      85.20001220703125
+    ],
+    "width": 263,
+    "height": 108
+  },
+  {
+    "page": 35,
+    "file": "assets/images/figure-2-1.png",
+    "caption_en": "Figure 2.1:  3-D Secure Domains and Components",
+    "bbox": [
+      72.0,
+      325.5088806152344,
+      523.3499755859375,
+      706.808837890625
+    ],
+    "width": 1129,
+    "height": 955
+  },
+  {
+    "page": 43,
+    "file": "assets/images/figure-2-2.png",
+    "caption_en": "Figure 2.2:  Frictionless Flow",
+    "bbox": [
+      72.0,
+      167.79586791992188,
+      523.3499755859375,
+      549.0958251953125
+    ],
+    "width": 1129,
+    "height": 954
+  },
+  {
+    "page": 44,
+    "file": "assets/images/figure-2-3.png",
+    "caption_en": "Figure 2.3:  3DS Requestor Environment—Frictionless Flow—App-based",
+    "bbox": [
+      72.00000762939453,
+      531.8178100585938,
+      523.3499755859375,
+      621.3677978515625
+    ],
+    "width": 1129,
+    "height": 225
+  },
+  {
+    "page": 45,
+    "file": "assets/images/figure-2-4.png",
+    "caption_en": "Figure 2.4:  3DS Requestor Environment—Browser-based",
+    "bbox": [
+      72.00000762939453,
+      236.83926391601562,
+      523.3500366210938,
+      321.9892578125
+    ],
+    "width": 1129,
+    "height": 213
+  },
+  {
+    "page": 46,
+    "file": "assets/images/figure-2-5.png",
+    "caption_en": "Figure 2.5:  3DS Requestor Environment—3RI",
+    "bbox": [
+      190.0,
+      103.0,
+      402.0,
+      257.0
+    ],
+    "width": 530,
+    "height": 386
+  },
+  {
+    "page": 47,
+    "file": "assets/images/figure-2-6.png",
+    "caption_en": "Figure 2.6:  Challenge Flow",
+    "bbox": [
+      71.99999237060547,
+      167.79595947265625,
+      523.3499755859375,
+      549.5459594726562
+    ],
+    "width": 1129,
+    "height": 955
+  },
+  {
+    "page": 50,
+    "file": "assets/images/figure-3-1.png",
+    "caption_en": "Figure 3.1:  3-D Secure Processing Flow Steps—App-based",
+    "bbox": [
+      72.0,
+      180.44479370117188,
+      523.3499755859375,
+      551.9947509765625
+    ],
+    "width": 1129,
+    "height": 929
+  },
+  {
+    "page": 65,
+    "file": "assets/images/figure-3-2.png",
+    "caption_en": "Figure 3.2:  Out-of-Band Processing Flow",
+    "bbox": [
+      71.99999237060547,
+      143.1470947265625,
+      523.3499755859375,
+      485.04705810546875
+    ],
+    "width": 1129,
+    "height": 856
+  },
+  {
+    "page": 69,
+    "file": "assets/images/figure-3-3.png",
+    "caption_en": "Figure 3.3:  3-D Secure Processing Flow Steps—Browser-based",
+    "bbox": [
+      72.0,
+      180.44476318359375,
+      523.3499755859375,
+      488.69476318359375
+    ],
+    "width": 1129,
+    "height": 771
+  },
+  {
+    "page": 82,
+    "file": "assets/images/figure-3-4.png",
+    "caption_en": "Figure 3.4:  3-D Secure Processing Flow Steps—3RI-based",
+    "bbox": [
+      72.3500747680664,
+      205.74270629882812,
+      523.0000610351562,
+      593.4066162109375
+    ],
+    "width": 1128,
+    "height": 970
+  },
+  {
+    "page": 90,
+    "file": "assets/images/figure-3-5.png",
+    "caption_en": "Figure 3.5:  3-D Secure Processing Flow Steps—SPC-based",
+    "bbox": [
+      72.00000762939453,
+      105.14703369140625,
+      523.25,
+      500.197021484375
+    ],
+    "width": 1129,
+    "height": 989
+  },
+  {
+    "page": 95,
+    "file": "assets/images/figure-4-1.png",
+    "caption_en": "Figure 4.1:  UI Template Zones—Portrait",
+    "bbox": [
+      71.99999237060547,
+      135.7958984375,
+      523.3090209960938,
+      535.995849609375
+    ],
+    "width": 1129,
+    "height": 1001
+  },
+  {
+    "page": 96,
+    "file": "assets/images/figure-4-2.png",
+    "caption_en": "Figure 4.2:  UI Template Zones—Landscape",
+    "bbox": [
+      72.0,
+      105.14704895019531,
+      523.3228759765625,
+      305.64703369140625
+    ],
+    "width": 1129,
+    "height": 503
+  },
+  {
+    "page": 97,
+    "file": "assets/images/figure-4-3.png",
+    "caption_en": "Figure 4.3:  UI Template Examples—All Device Channels",
+    "bbox": [
+      71.99999237060547,
+      148.44476318359375,
+      523.3499755859375,
+      480.29473876953125
+    ],
+    "width": 1129,
+    "height": 830
+  },
+  {
+    "page": 97,
+    "file": "assets/images/figure-4-4.png",
+    "caption_en": "Figure 4.4:  UI Template Examples—App-based—Landscape",
+    "bbox": [
+      74.57495880126953,
+      547.5927124023438,
+      520.7234497070312,
+      706.6427001953125
+    ],
+    "width": 1116,
+    "height": 399
+  },
+  {
+    "page": 98,
+    "file": "assets/images/figure-4-5.png",
+    "caption_en": "Figure 4.5:  Sample UI OTP/Text Template with/without Device Header",
+    "bbox": [
+      72.67503356933594,
+      105.14706420898438,
+      522.6749877929688,
+      252.04705810546875
+    ],
+    "width": 1126,
+    "height": 369
+  },
+  {
+    "page": 99,
+    "file": "assets/images/figure-4-6.png",
+    "caption_en": "Figure 4.6:  3DS SDK Options",
+    "bbox": [
+      73.24999237060547,
+      148.44482421875,
+      522.0999145507812,
+      445.7721862792969
+    ],
+    "width": 1123,
+    "height": 744
+  },
+  {
+    "page": 100,
+    "file": "assets/images/figure-4-7.png",
+    "caption_en": "Figure 4.7:  Sample App-based Processing Screen—Portrait",
+    "bbox": [
+      149.17501831054688,
+      148.44482421875,
+      445.875,
+      424.8733825683594
+    ],
+    "width": 743,
+    "height": 692
+  },
+  {
+    "page": 100,
+    "file": "assets/images/figure-4-8.png",
+    "caption_en": "Figure 4.8:  Sample App-based Processing Screen—Landscape",
+    "bbox": [
+      74.92503356933594,
+      467.54364013671875,
+      519.7750244140625,
+      610.5347900390625
+    ],
+    "width": 1113,
+    "height": 359
+  },
+  {
+    "page": 101,
+    "file": "assets/images/figure-4-9.png",
+    "caption_en": "Figure 4.9:  Sample OTP/Text Template—App-based Processing Flow",
+    "bbox": [
+      72.0,
+      454.7744140625,
+      523.25,
+      639.1243896484375
+    ],
+    "width": 1129,
+    "height": 462
+  },
+  {
+    "page": 102,
+    "file": "assets/images/figure-4-10.png",
+    "caption_en": "Figure 4.10:  Sample OOB Template (Manual transfer to and from the OOB App)—App- based Processing Flow",
+    "bbox": [
+      72.0,
+      161.09376525878906,
+      532.764404296875,
+      348.7437438964844
+    ],
+    "width": 1152,
+    "height": 470
+  },
+  {
+    "page": 102,
+    "file": "assets/images/figure-4-11.png",
+    "caption_en": "Figure 4.11:  Sample OOB Template (OOB App and 3DS Requestor App on same  device)—w/o OOB App launch button—App-based Processing Flow",
+    "bbox": [
+      72.0,
+      453.98828125,
+      532.6976318359375,
+      653.438232421875
+    ],
+    "width": 1152,
+    "height": 500
+  },
+  {
+    "page": 103,
+    "file": "assets/images/figure-4-12.png",
+    "caption_en": "Figure 4.12:  Sample OOB Template (OOB App and 3DS Requestor App on same  device with OOB App launch button)—App-based Processing Flow",
+    "bbox": [
+      72.0,
+      173.74273681640625,
+      524.5576171875,
+      401.2427062988281
+    ],
+    "width": 1132,
+    "height": 570
+  },
+  {
+    "page": 104,
+    "file": "assets/images/figure-4-13.png",
+    "caption_en": "Figure 4.13:  Sample Decoupled Authentication Template—App-based Processing  Flow",
+    "bbox": [
+      82.37503051757812,
+      117.7958984375,
+      512.9694213867188,
+      469.69586181640625
+    ],
+    "width": 1078,
+    "height": 881
+  },
+  {
+    "page": 107,
+    "file": "assets/images/figure-4-14.png",
+    "caption_en": "Figure 4.14:  Sample Native UI OTP/Text Template—PA—Portrait",
+    "bbox": [
+      72.0,
+      173.74258422851562,
+      546.0499267578125,
+      620.9219970703125
+    ],
+    "width": 1186,
+    "height": 1119
+  },
+  {
+    "page": 108,
+    "file": "assets/images/figure-4-15.png",
+    "caption_en": "Figure 4.15:  Sample Native UI OTP/Text Template—PA—Landscape",
+    "bbox": [
+      71.99999237060547,
+      105.14703369140625,
+      523.3121337890625,
+      320.447021484375
+    ],
+    "width": 1129,
+    "height": 540
+  },
+  {
+    "page": 109,
+    "file": "assets/images/figure-4-16.png",
+    "caption_en": "Figure 4.16:  Sample Native UI with Optional Second OTP/Text entries Template— PA—Portrait",
+    "bbox": [
+      96.3000717163086,
+      123.79595947265625,
+      498.99609375,
+      455.9459533691406
+    ],
+    "width": 1008,
+    "height": 831
+  },
+  {
+    "page": 109,
+    "file": "assets/images/figure-4-17.png",
+    "caption_en": "Figure 4.17:  Sample Native UI with Optional Second OTP/Text entries Template— PA—Landscape",
+    "bbox": [
+      72.00000762939453,
+      511.24359130859375,
+      530.5499877929688,
+      706.2381591796875
+    ],
+    "width": 1147,
+    "height": 488
+  },
+  {
+    "page": 110,
+    "file": "assets/images/figure-4-18.png",
+    "caption_en": "Figure 4.18:  Sample Native UI OTP/Text Template—NPA",
+    "bbox": [
+      101.35008239746094,
+      148.44476318359375,
+      493.99810791015625,
+      499.4947509765625
+    ],
+    "width": 982,
+    "height": 878
+  },
+  {
+    "page": 111,
+    "file": "assets/images/figure-4-19.png",
+    "caption_en": "Figure 4.19:  Sample Native UI—Single-select Information—PA—Portrait",
+    "bbox": [
+      86.69992065429688,
+      105.14703369140625,
+      508.617919921875,
+      493.74700927734375
+    ],
+    "width": 1056,
+    "height": 973
+  },
+  {
+    "page": 111,
+    "file": "assets/images/figure-4-20.png",
+    "caption_en": "Figure 4.20:  Sample Native UI—Single-select Information—PA—Landscape",
+    "bbox": [
+      72.87503814697266,
+      536.3959350585938,
+      522.400634765625,
+      736.4459228515625
+    ],
+    "width": 1125,
+    "height": 502
+  },
+  {
+    "page": 112,
+    "file": "assets/images/figure-4-21.png",
+    "caption_en": "Figure 4.21:  Sample Native UI—Multi-select Information—PA—Portrait",
+    "bbox": [
+      72.0,
+      202.04055786132812,
+      528.1766357421875,
+      607.8905029296875
+    ],
+    "width": 1141,
+    "height": 1015
+  },
+  {
+    "page": 113,
+    "file": "assets/images/figure-4-22.png",
+    "caption_en": "Figure 4.22:  Sample Native UI—Multi-select Information—PA—Landscape",
+    "bbox": [
+      72.0,
+      105.14712524414062,
+      529.0999755859375,
+      304.79254150390625
+    ],
+    "width": 1143,
+    "height": 500
+  },
+  {
+    "page": 114,
+    "file": "assets/images/figure-4-23.png",
+    "caption_en": "Figure 4.23:  Sample OOB Native UI Template with Complete button—PA—Portrait",
+    "bbox": [
+      80.90015411376953,
+      105.14703369140625,
+      514.4501342773438,
+      470.96722412109375
+    ],
+    "width": 1085,
+    "height": 916
+  },
+  {
+    "page": 114,
+    "file": "assets/images/figure-4-24.png",
+    "caption_en": "Figure 4.24:  Sample OOB Native UI Template with Complete button—PA—Landscape",
+    "bbox": [
+      74.42503356933594,
+      513.7958374023438,
+      520.9236450195312,
+      696.495849609375
+    ],
+    "width": 1117,
+    "height": 458
+  },
+  {
+    "page": 115,
+    "file": "assets/images/figure-4-25.png",
+    "caption_en": "Figure 4.25:  Sample OOB Native UI Template with Automatic OOB App URL link— Portrait",
+    "bbox": [
+      82.55007934570312,
+      117.7958984375,
+      512.773681640625,
+      479.44586181640625
+    ],
+    "width": 1076,
+    "height": 905
+  },
+  {
+    "page": 115,
+    "file": "assets/images/figure-4-26.png",
+    "caption_en": "Figure 4.26:  Sample OOB Native UI Template with Automatic OOB App URL link— Landscape",
+    "bbox": [
+      74.74999237060547,
+      534.74365234375,
+      520.5900268554688,
+      717.443603515625
+    ],
+    "width": 1116,
+    "height": 458
+  },
+  {
+    "page": 116,
+    "file": "assets/images/figure-4-27.png",
+    "caption_en": "Figure 4.27:  Sample Challenge Information Text Indicator—PA",
+    "bbox": [
+      78.30007934570312,
+      148.4447021484375,
+      517.0406494140625,
+      562.6446533203125
+    ],
+    "width": 1098,
+    "height": 1036
+  },
+  {
+    "page": 117,
+    "file": "assets/images/figure-4-28.png",
+    "caption_en": "Figure 4.28:  Sample Trust List/Device Binding Information Text—PA—Portrait",
+    "bbox": [
+      72.37503814697266,
+      189.39144897460938,
+      522.9655151367188,
+      599.8414306640625
+    ],
+    "width": 1128,
+    "height": 1027
+  },
+  {
+    "page": 118,
+    "file": "assets/images/figure-4-29.png",
+    "caption_en": "Figure 4.29:  Sample Trust List/Device Binding Information Text—PA—Portrait",
+    "bbox": [
+      73.1999282836914,
+      105.14697265625,
+      522.14990234375,
+      514.64111328125
+    ],
+    "width": 1123,
+    "height": 1025
+  },
+  {
+    "page": 118,
+    "file": "assets/images/figure-4-30.png",
+    "caption_en": "Figure 4.30:  Sample Trust List/Device Binding Information Text—PA—Landscape",
+    "bbox": [
+      72.0,
+      557.2958374023438,
+      526.36572265625,
+      752.5458374023438
+    ],
+    "width": 1136,
+    "height": 489
+  },
+  {
+    "page": 119,
+    "file": "assets/images/figure-4-31.png",
+    "caption_en": "Figure 4.31:  Sample Trust List/Device Binding Information Text—PA—Landscape",
+    "bbox": [
+      72.0,
+      105.14710998535156,
+      528.6026611328125,
+      293.047119140625
+    ],
+    "width": 1142,
+    "height": 471
+  },
+  {
+    "page": 120,
+    "file": "assets/images/figure-4-32.png",
+    "caption_en": "Figure 4.32:  Sample Information Native UI Template—PA—Portrait",
+    "bbox": [
+      100.824951171875,
+      111.14703369140625,
+      494.4944152832031,
+      445.6470031738281
+    ],
+    "width": 985,
+    "height": 838
+  },
+  {
+    "page": 120,
+    "file": "assets/images/figure-4-33.png",
+    "caption_en": "Figure 4.33:  Sample Information Native UI Template—PA—Landscape",
+    "bbox": [
+      89.92503356933594,
+      488.29583740234375,
+      505.083984375,
+      673.0458374023438
+    ],
+    "width": 1039,
+    "height": 463
+  },
+  {
+    "page": 121,
+    "file": "assets/images/figure-4-34.png",
+    "caption_en": "Figure 4.34:  Sample Challenge Data Entry Masking—PA",
+    "bbox": [
+      72.0,
+      105.14706420898438,
+      525.7349853515625,
+      398.4470520019531
+    ],
+    "width": 1135,
+    "height": 735
+  },
+  {
+    "page": 121,
+    "file": "assets/images/figure-4-35.png",
+    "caption_en": "Figure 4.35:  Sample Data Entry Masking with Toggle",
+    "bbox": [
+      72.0,
+      441.7958984375,
+      526.449951171875,
+      724.8897094726562
+    ],
+    "width": 1137,
+    "height": 709
+  },
+  {
+    "page": 122,
+    "file": "assets/images/figure-4-36.png",
+    "caption_en": "Figure 4.36:  Native UI OTP/Text Template with Challenge Additional Label—PA— Portrait",
+    "bbox": [
+      72.0,
+      161.09375,
+      533.2390747070312,
+      563.293701171875
+    ],
+    "width": 1154,
+    "height": 1007
+  },
+  {
+    "page": 123,
+    "file": "assets/images/figure-4-37.png",
+    "caption_en": "Figure 4.37:  Sample Native UI OTP/Text Template with Challenge Additional Label— PA—Landscape",
+    "bbox": [
+      72.0,
+      117.79588317871094,
+      540.38525390625,
+      319.745849609375
+    ],
+    "width": 1171,
+    "height": 506
+  },
+  {
+    "page": 126,
+    "file": "assets/images/figure-4-38.png",
+    "caption_en": "Figure 4.38:  Sample HTML UI OTP/Text Template—PA—Portrait",
+    "bbox": [
+      97.22511291503906,
+      105.14703369140625,
+      498.1251220703125,
+      496.08013916015625
+    ],
+    "width": 1003,
+    "height": 979
+  },
+  {
+    "page": 126,
+    "file": "assets/images/figure-4-39.png",
+    "caption_en": "Figure 4.39:  Sample HTML UI OTP/Text Template—PA—Landscape",
+    "bbox": [
+      73.24999237060547,
+      539.2958984375,
+      522.091796875,
+      743.6458740234375
+    ],
+    "width": 1123,
+    "height": 512
+  },
+  {
+    "page": 127,
+    "file": "assets/images/figure-4-40.png",
+    "caption_en": "Figure 4.40:  Sample UI OTP/Text Template—NPA",
+    "bbox": [
+      72.0,
+      161.09368896484375,
+      550.06884765625,
+      636.99365234375
+    ],
+    "width": 1196,
+    "height": 1191
+  },
+  {
+    "page": 128,
+    "file": "assets/images/figure-4-41.png",
+    "caption_en": "Figure 4.41:  Sample OOB HTML UI Template with Complete button—PA—Portrait",
+    "bbox": [
+      72.0,
+      135.79595947265625,
+      526.798828125,
+      589.345947265625
+    ],
+    "width": 1137,
+    "height": 1135
+  },
+  {
+    "page": 129,
+    "file": "assets/images/figure-4-42.png",
+    "caption_en": "Figure 4.42:  Sample OOB HTML UI Template with Complete button—PA—Landscape",
+    "bbox": [
+      71.99999237060547,
+      105.14718627929688,
+      534.0834350585938,
+      316.09716796875
+    ],
+    "width": 1156,
+    "height": 529
+  },
+  {
+    "page": 130,
+    "file": "assets/images/figure-4-43.png",
+    "caption_en": "Figure 4.43:  Sample OOB HTML UI Template with OOB App URL button—PA—Portrait",
+    "bbox": [
+      72.00000762939453,
+      105.14706420898438,
+      523.3270874023438,
+      549.197021484375
+    ],
+    "width": 1129,
+    "height": 1111
+  },
+  {
+    "page": 131,
+    "file": "assets/images/figure-4-44.png",
+    "caption_en": "Figure 4.44:  Sample OOB HTML UI Template with OOB App URL button—PA— Landscape",
+    "bbox": [
+      72.00000762939453,
+      117.79583740234375,
+      531.564453125,
+      327.5958251953125
+    ],
+    "width": 1149,
+    "height": 525
+  },
+  {
+    "page": 132,
+    "file": "assets/images/figure-4-45.png",
+    "caption_en": "Figure 4.45:  Sample Information HTML UI Template—Portrait",
+    "bbox": [
+      72.0,
+      105.14697265625,
+      526.393310546875,
+      552.1969604492188
+    ],
+    "width": 1136,
+    "height": 1119
+  },
+  {
+    "page": 133,
+    "file": "assets/images/figure-4-46.png",
+    "caption_en": "Figure 4.46:  Sample Information HTML UI Template—Landscape",
+    "bbox": [
+      72.0,
+      105.1470947265625,
+      529.0824584960938,
+      313.44708251953125
+    ],
+    "width": 1143,
+    "height": 522
+  },
+  {
+    "page": 134,
+    "file": "assets/images/figure-4-47.png",
+    "caption_en": "Figure 4.47:  Sample HTML Other UI Template—PA—Portrait",
+    "bbox": [
+      71.99999237060547,
+      173.74267578125,
+      523.3003540039062,
+      617.3426513671875
+    ],
+    "width": 1129,
+    "height": 1110
+  },
+  {
+    "page": 135,
+    "file": "assets/images/figure-4-48.png",
+    "caption_en": "Figure 4.48:  Sample HTML Other UI Template—PA—Landscape",
+    "bbox": [
+      72.00000762939453,
+      105.14698791503906,
+      527.3746948242188,
+      312.89697265625
+    ],
+    "width": 1139,
+    "height": 521
+  },
+  {
+    "page": 139,
+    "file": "assets/images/figure-4-49.png",
+    "caption_en": "Figure 4.49:  App-based HTML and Browser UI Comparison",
+    "bbox": [
+      75.47511291503906,
+      180.89266967773438,
+      519.8751220703125,
+      606.880615234375
+    ],
+    "width": 1112,
+    "height": 1066
+  },
+  {
+    "page": 140,
+    "file": "assets/images/figure-4-50.png",
+    "caption_en": "Figure 4.50:  Sample Browser Lightbox Processing Screen without White Box",
+    "bbox": [
+      72.0,
+      135.7958984375,
+      523.4696655273438,
+      490.1458740234375
+    ],
+    "width": 1129,
+    "height": 887
+  },
+  {
+    "page": 141,
+    "file": "assets/images/figure-4-51.png",
+    "caption_en": "Figure 4.51:  Sample Inline Browser Processing Screen with White Box",
+    "bbox": [
+      72.0,
+      135.79583740234375,
+      527.3556518554688,
+      493.19580078125
+    ],
+    "width": 1139,
+    "height": 894
+  },
+  {
+    "page": 142,
+    "file": "assets/images/figure-4-52.png",
+    "caption_en": "Figure 4.52:  Sample Browser with Lightbox UI—PA",
+    "bbox": [
+      72.00000762939453,
+      135.79583740234375,
+      523.3499755859375,
+      489.2958068847656
+    ],
+    "width": 1129,
+    "height": 885
+  },
+  {
+    "page": 143,
+    "file": "assets/images/figure-4-53.png",
+    "caption_en": "Figure 4.53:  Sample Browser with Inline UI—PA",
+    "bbox": [
+      72.00000762939453,
+      135.79583740234375,
+      523.3499755859375,
+      489.2958068847656
+    ],
+    "width": 1129,
+    "height": 885
+  },
+  {
+    "page": 172,
+    "file": "assets/images/figure-6-1.png",
+    "caption_en": "Figure 6.1:  Security Flow—App-based",
+    "bbox": [
+      71.99999237060547,
+      223.3916015625,
+      523.3499755859375,
+      605.1416015625
+    ],
+    "width": 1129,
+    "height": 955
+  },
+  {
+    "page": 173,
+    "file": "assets/images/figure-6-2.png",
+    "caption_en": "Figure 6.2:  Security Flow—Browser-based",
+    "bbox": [
+      72.0,
+      105.1470947265625,
+      523.3499755859375,
+      459.3470764160156
+    ],
+    "width": 1129,
+    "height": 887
+  },
+  {
+    "page": 177,
+    "file": "assets/images/figure-6-3.png",
+    "caption_en": "Figure 6.3:  Security Functions",
+    "bbox": [
+      72.00000762939453,
+      180.4447021484375,
+      523.3499755859375,
+      571.2446899414062
+    ],
+    "width": 1129,
+    "height": 978
+  },
+  {
+    "page": 369,
+    "file": "assets/images/figure-A-1.png",
+    "caption_en": "Figure A.1  Sample Cardholder Information UI Example—App—Portrait",
+    "bbox": [
+      226.0,
+      166.0,
+      605.0,
+      490.0
+    ],
+    "width": 948,
+    "height": 810
+  },
+  {
+    "page": 370,
+    "file": "assets/images/figure-A-2.png",
+    "caption_en": "Figure A.2  Sample Cardholder Information UI Example—Browser—Landscape",
+    "bbox": [
+      70.0,
+      103.0,
+      765.0,
+      425.0
+    ],
+    "width": 1738,
+    "height": 806
+  }
+]

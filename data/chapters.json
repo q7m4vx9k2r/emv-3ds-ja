@@ -1,0 +1,74 @@
+[
+  [
+    "front",
+    "Front matter",
+    1,
+    16
+  ],
+  [
+    "01",
+    "Introduction",
+    17,
+    34
+  ],
+  [
+    "02",
+    "EMV 3-D Secure Overview",
+    35,
+    48
+  ],
+  [
+    "03",
+    "Authentication Flow Requirements",
+    49,
+    93
+  ],
+  [
+    "04",
+    "User Interface Templates, Requirements and Guidelines",
+    94,
+    144
+  ],
+  [
+    "05",
+    "Message Handling Requirements",
+    145,
+    171
+  ],
+  [
+    "06",
+    "Security Requirements",
+    172,
+    184
+  ],
+  [
+    "a",
+    "3-D Secure Data Elements",
+    185,
+    376
+  ],
+  [
+    "b",
+    "Message Format",
+    377,
+    393
+  ],
+  [
+    "c",
+    "Generate ECC Key Pair",
+    394,
+    395
+  ],
+  [
+    "d",
+    "Approved Transport Layer Security Versions",
+    396,
+    397
+  ],
+  [
+    "requirements",
+    "Requirements index",
+    398,
+    410
+  ]
+]
