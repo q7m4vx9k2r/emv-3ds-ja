@@ -41,6 +41,7 @@ python3 -m http.server 8000 --directory _site
 | パス | 内容 |
 | --- | --- |
 | `index.md` | 章別目次と翻訳状況 |
+| `guide.md` | EMV 3-D Secure CoreSpecの概要を学ぶ入門書 |
 | `ja/chapters/` | 翻訳済みの章（前付けは一部） |
 | `ja/pages/` | 原本ページ別の日本語参考訳 |
 | `en/chapters/` | 英語の章別Markdown |
